@@ -105,6 +105,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -133,12 +135,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CriarBuraco.cpp" />
+    <ClCompile Include="ListaOS.cpp" />
     <ClCompile Include="Login.cpp" />
+    <ClCompile Include="RealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CriarBuraco.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListaOS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RealizacaoOS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CriarBuraco.resx">
+      <DependentUpon>CriarBuraco.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaOS.resx">
+      <DependentUpon>ListaOS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizacaoOS.resx">
+      <DependentUpon>RealizacaoOS.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
