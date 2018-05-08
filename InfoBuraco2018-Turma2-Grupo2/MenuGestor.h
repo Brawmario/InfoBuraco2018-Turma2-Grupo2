@@ -34,8 +34,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  bt_emitirRelatorio;
+	private: System::Windows::Forms::Button^  bt_manipulaçãoPrioridadeOS;
+	protected:
+
+	protected:
+
+
 
 	private: System::ComponentModel::IContainer^  components;
 	protected:
@@ -56,36 +61,38 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->bt_emitirRelatorio = (gcnew System::Windows::Forms::Button());
+			this->bt_manipulaçãoPrioridadeOS = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
+			// bt_emitirRelatorio
 			// 
-			this->button1->Location = System::Drawing::Point(120, 75);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(184, 31);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Emitir Relatório";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MenuGestor::button1_Click);
+			this->bt_emitirRelatorio->BackColor = System::Drawing::SystemColors::Control;
+			this->bt_emitirRelatorio->Location = System::Drawing::Point(120, 75);
+			this->bt_emitirRelatorio->Name = L"bt_emitirRelatorio";
+			this->bt_emitirRelatorio->Size = System::Drawing::Size(184, 31);
+			this->bt_emitirRelatorio->TabIndex = 1;
+			this->bt_emitirRelatorio->Text = L"Emitir Relatório";
+			this->bt_emitirRelatorio->UseVisualStyleBackColor = false;
+			this->bt_emitirRelatorio->Click += gcnew System::EventHandler(this, &MenuGestor::button1_Click);
 			// 
-			// button2
+			// bt_manipulaçãoPrioridadeOS
 			// 
-			this->button2->Location = System::Drawing::Point(120, 146);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(184, 31);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Manipulação de prioridade de OS";
-			this->button2->UseVisualStyleBackColor = true;
+			this->bt_manipulaçãoPrioridadeOS->BackColor = System::Drawing::SystemColors::Control;
+			this->bt_manipulaçãoPrioridadeOS->Location = System::Drawing::Point(120, 146);
+			this->bt_manipulaçãoPrioridadeOS->Name = L"bt_manipulaçãoPrioridadeOS";
+			this->bt_manipulaçãoPrioridadeOS->Size = System::Drawing::Size(184, 31);
+			this->bt_manipulaçãoPrioridadeOS->TabIndex = 2;
+			this->bt_manipulaçãoPrioridadeOS->Text = L"Manipulação de prioridade de OS";
+			this->bt_manipulaçãoPrioridadeOS->UseVisualStyleBackColor = false;
 			// 
 			// MenuGestor
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(421, 257);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->bt_manipulaçãoPrioridadeOS);
+			this->Controls->Add(this->bt_emitirRelatorio);
 			this->Name = L"MenuGestor";
 			this->Text = L"MenuGestor";
 			this->Load += gcnew System::EventHandler(this, &MenuGestor::MenuGestor_Load);
