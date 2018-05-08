@@ -47,11 +47,12 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::ToolStripSeparator^  toolStripSeparator2;
 	private: System::Windows::Forms::ToolStripButton^  tsbt_notificações;
 	private: System::Windows::Forms::ToolStripDropDownButton^  tsbt_informaçõesDoUsuário;
-	private: System::Windows::Forms::ToolStripMenuItem^  visualizarInformaçõesDoUsuárioToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^  alterarUsernameToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  alterarSenhaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  signOutToolStripMenuItem;
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  lb_menuPrincipal;
+
 
 	protected:
 
@@ -82,14 +83,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_emitirRelatorio = (gcnew System::Windows::Forms::Button());
 			this->bt_manipulaçãoPrioridadeOS = (gcnew System::Windows::Forms::Button());
 			this->ts_usuário = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripSeparator2 = (gcnew System::Windows::Forms::ToolStripSeparator());
-			this->tsbt_notificações = (gcnew System::Windows::Forms::ToolStripButton());
 			this->tsbt_informaçõesDoUsuário = (gcnew System::Windows::Forms::ToolStripDropDownButton());
-			this->visualizarInformaçõesDoUsuárioToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->alterarUsernameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->alterarSenhaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->signOutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->toolStripSeparator2 = (gcnew System::Windows::Forms::ToolStripSeparator());
+			this->tsbt_notificações = (gcnew System::Windows::Forms::ToolStripButton());
+			this->lb_menuPrincipal = (gcnew System::Windows::Forms::Label());
 			this->ts_usuário->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -126,6 +126,38 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->ts_usuário->TabIndex = 3;
 			this->ts_usuário->Text = L"toolStrip1";
 			// 
+			// tsbt_informaçõesDoUsuário
+			// 
+			this->tsbt_informaçõesDoUsuário->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->tsbt_informaçõesDoUsuário->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->alterarUsernameToolStripMenuItem,
+					this->alterarSenhaToolStripMenuItem, this->signOutToolStripMenuItem
+			});
+			this->tsbt_informaçõesDoUsuário->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tsbt_informaçõesDoUsuário.Image")));
+			this->tsbt_informaçõesDoUsuário->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->tsbt_informaçõesDoUsuário->Name = L"tsbt_informaçõesDoUsuário";
+			this->tsbt_informaçõesDoUsuário->Size = System::Drawing::Size(29, 22);
+			this->tsbt_informaçõesDoUsuário->Text = L"toolStripButton2";
+			this->tsbt_informaçõesDoUsuário->Click += gcnew System::EventHandler(this, &MenuGestor::tsbt_informaçõesDoUsuário_Click);
+			// 
+			// alterarUsernameToolStripMenuItem
+			// 
+			this->alterarUsernameToolStripMenuItem->Name = L"alterarUsernameToolStripMenuItem";
+			this->alterarUsernameToolStripMenuItem->Size = System::Drawing::Size(164, 22);
+			this->alterarUsernameToolStripMenuItem->Text = L"Alterar username";
+			// 
+			// alterarSenhaToolStripMenuItem
+			// 
+			this->alterarSenhaToolStripMenuItem->Name = L"alterarSenhaToolStripMenuItem";
+			this->alterarSenhaToolStripMenuItem->Size = System::Drawing::Size(164, 22);
+			this->alterarSenhaToolStripMenuItem->Text = L"Alterar senha";
+			// 
+			// signOutToolStripMenuItem
+			// 
+			this->signOutToolStripMenuItem->Name = L"signOutToolStripMenuItem";
+			this->signOutToolStripMenuItem->Size = System::Drawing::Size(164, 22);
+			this->signOutToolStripMenuItem->Text = L"Sign Out";
+			// 
 			// toolStripSeparator2
 			// 
 			this->toolStripSeparator2->Name = L"toolStripSeparator2";
@@ -141,60 +173,22 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->tsbt_notificações->Size = System::Drawing::Size(75, 22);
 			this->tsbt_notificações->Text = L"Notificações";
 			// 
-			// tsbt_informaçõesDoUsuário
+			// lb_menuPrincipal
 			// 
-			this->tsbt_informaçõesDoUsuário->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->tsbt_informaçõesDoUsuário->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->visualizarInformaçõesDoUsuárioToolStripMenuItem,
-					this->alterarUsernameToolStripMenuItem, this->alterarSenhaToolStripMenuItem, this->signOutToolStripMenuItem
-			});
-			this->tsbt_informaçõesDoUsuário->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"tsbt_informaçõesDoUsuário.Image")));
-			this->tsbt_informaçõesDoUsuário->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->tsbt_informaçõesDoUsuário->Name = L"tsbt_informaçõesDoUsuário";
-			this->tsbt_informaçõesDoUsuário->Size = System::Drawing::Size(29, 22);
-			this->tsbt_informaçõesDoUsuário->Text = L"toolStripButton2";
-			this->tsbt_informaçõesDoUsuário->Click += gcnew System::EventHandler(this, &MenuGestor::tsbt_informaçõesDoUsuário_Click);
-			// 
-			// visualizarInformaçõesDoUsuárioToolStripMenuItem
-			// 
-			this->visualizarInformaçõesDoUsuárioToolStripMenuItem->Name = L"visualizarInformaçõesDoUsuárioToolStripMenuItem";
-			this->visualizarInformaçõesDoUsuárioToolStripMenuItem->Size = System::Drawing::Size(251, 22);
-			this->visualizarInformaçõesDoUsuárioToolStripMenuItem->Text = L"Visualizar informações do usuário";
-			// 
-			// alterarUsernameToolStripMenuItem
-			// 
-			this->alterarUsernameToolStripMenuItem->Name = L"alterarUsernameToolStripMenuItem";
-			this->alterarUsernameToolStripMenuItem->Size = System::Drawing::Size(251, 22);
-			this->alterarUsernameToolStripMenuItem->Text = L"Alterar username";
-			// 
-			// alterarSenhaToolStripMenuItem
-			// 
-			this->alterarSenhaToolStripMenuItem->Name = L"alterarSenhaToolStripMenuItem";
-			this->alterarSenhaToolStripMenuItem->Size = System::Drawing::Size(251, 22);
-			this->alterarSenhaToolStripMenuItem->Text = L"Alterar senha";
-			// 
-			// signOutToolStripMenuItem
-			// 
-			this->signOutToolStripMenuItem->Name = L"signOutToolStripMenuItem";
-			this->signOutToolStripMenuItem->Size = System::Drawing::Size(251, 22);
-			this->signOutToolStripMenuItem->Text = L"Sign Out";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			this->label1->Location = System::Drawing::Point(145, 34);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(136, 24);
-			this->label1->TabIndex = 7;
-			this->label1->Text = L"Menu Principal";
+			this->lb_menuPrincipal->AutoSize = true;
+			this->lb_menuPrincipal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->lb_menuPrincipal->Location = System::Drawing::Point(141, 34);
+			this->lb_menuPrincipal->Name = L"lb_menuPrincipal";
+			this->lb_menuPrincipal->Size = System::Drawing::Size(136, 24);
+			this->lb_menuPrincipal->TabIndex = 7;
+			this->lb_menuPrincipal->Text = L"Menu Principal";
 			// 
 			// MenuGestor
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(421, 219);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->lb_menuPrincipal);
 			this->Controls->Add(this->ts_usuário);
 			this->Controls->Add(this->bt_manipulaçãoPrioridadeOS);
 			this->Controls->Add(this->bt_emitirRelatorio);

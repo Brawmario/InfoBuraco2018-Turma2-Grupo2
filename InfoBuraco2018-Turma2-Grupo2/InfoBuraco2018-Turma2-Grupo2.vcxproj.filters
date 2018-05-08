@@ -24,6 +24,12 @@
     <ClCompile Include="MenuDespachador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuEncarregadoDaObra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuAcessoriaDeComunicação.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
@@ -35,12 +41,24 @@
     <ClInclude Include="MenuDespachador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MenuEncarregadoDaObra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuAcessoriaDeComunicação.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuGestor.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDespachador.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEncarregadoDaObra.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

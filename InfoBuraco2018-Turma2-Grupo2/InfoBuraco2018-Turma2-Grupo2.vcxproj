@@ -140,14 +140,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Login.cpp" />
+    <ClCompile Include="MenuAcessoriaDeComunicação.cpp" />
     <ClCompile Include="MenuDespachador.cpp" />
+    <ClCompile Include="MenuEncarregadoDaObra.cpp" />
     <ClCompile Include="MenuGestor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MenuAcessoriaDeComunicação.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuDespachador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MenuEncarregadoDaObra.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuGestor.h">
@@ -158,8 +166,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuAcessoriaDeComunicação.resx">
+      <DependentUpon>MenuAcessoriaDeComunicação.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuDespachador.resx">
       <DependentUpon>MenuDespachador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEncarregadoDaObra.resx">
+      <DependentUpon>MenuEncarregadoDaObra.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuGestor.resx">
       <DependentUpon>MenuGestor.h</DependentUpon>
