@@ -53,6 +53,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::TextBox^  tb_log;
 	private: System::Windows::Forms::Label^  lb_log;
 
+	private: System::ComponentModel::IContainer^  components;
+
 
 
 
@@ -62,7 +64,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -158,13 +160,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_novaConta
 			// 
 			this->tsmi_novaConta->Name = L"tsmi_novaConta";
-			this->tsmi_novaConta->Size = System::Drawing::Size(180, 22);
+			this->tsmi_novaConta->Size = System::Drawing::Size(161, 22);
 			this->tsmi_novaConta->Text = L"Criar nova conta";
 			// 
 			// tsmi_sair
 			// 
 			this->tsmi_sair->Name = L"tsmi_sair";
-			this->tsmi_sair->Size = System::Drawing::Size(180, 22);
+			this->tsmi_sair->Size = System::Drawing::Size(161, 22);
 			this->tsmi_sair->Text = L"Sair";
 			// 
 			// tb_log
@@ -208,5 +210,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+	}
+};
 }
