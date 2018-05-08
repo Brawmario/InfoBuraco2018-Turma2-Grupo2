@@ -30,6 +30,12 @@
     <ClCompile Include="MenuAcessoriaDeComunicação.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TelaAlterarUsername.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaAlterarSenha.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
@@ -47,6 +53,12 @@
     <ClInclude Include="MenuAcessoriaDeComunicação.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TelaAlterarUsername.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarSenha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
@@ -59,6 +71,12 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuEncarregadoDaObra.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAcessoriaDeComunicação.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarUsername.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

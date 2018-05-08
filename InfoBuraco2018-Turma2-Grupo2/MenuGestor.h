@@ -177,7 +177,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// 
 			this->lb_menuPrincipal->AutoSize = true;
 			this->lb_menuPrincipal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			this->lb_menuPrincipal->Location = System::Drawing::Point(141, 34);
+			this->lb_menuPrincipal->Location = System::Drawing::Point(146, 39);
 			this->lb_menuPrincipal->Name = L"lb_menuPrincipal";
 			this->lb_menuPrincipal->Size = System::Drawing::Size(136, 24);
 			this->lb_menuPrincipal->TabIndex = 7;

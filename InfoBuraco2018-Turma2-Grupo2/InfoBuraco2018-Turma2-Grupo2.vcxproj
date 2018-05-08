@@ -135,6 +135,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -144,6 +145,8 @@
     <ClCompile Include="MenuDespachador.cpp" />
     <ClCompile Include="MenuEncarregadoDaObra.cpp" />
     <ClCompile Include="MenuGestor.cpp" />
+    <ClCompile Include="TelaAlterarSenha.cpp" />
+    <ClCompile Include="TelaAlterarUsername.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
@@ -159,6 +162,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuGestor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarSenha.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarUsername.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -177,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuGestor.resx">
       <DependentUpon>MenuGestor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarSenha.resx">
+      <DependentUpon>TelaAlterarSenha.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarUsername.resx">
+      <DependentUpon>TelaAlterarUsername.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
