@@ -57,6 +57,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Button^  bt_debugDespachador;
 	private: System::Windows::Forms::Button^  bt_debugEncarregado;
 
+	private: System::ComponentModel::IContainer^  components;
+
 
 
 
@@ -66,7 +68,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -249,6 +251,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"TelaLogin";
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -256,5 +259,9 @@ namespace InfoBuraco2018Turma2Grupo2 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+	}
+private: System::Void Login_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+};
 }
