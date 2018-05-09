@@ -251,7 +251,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"TelaLogin";
 			this->Text = L"Login";
-			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
+			this->Load += gcnew System::EventHandler(this, &TelaLogin::Login_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
