@@ -135,39 +135,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CriarBuraco.cpp" />
-    <ClCompile Include="ListaOS.cpp" />
-    <ClCompile Include="Login.cpp" />
-    <ClCompile Include="RealizacaoOS.cpp" />
+    <ClCompile Include="TelaCriarBuraco.cpp" />
+    <ClCompile Include="TelaListaOS.cpp" />
+    <ClCompile Include="TelaLogin.cpp" />
+    <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CriarBuraco.h">
+    <ClInclude Include="TelaCriarBuraco.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ListaOS.h">
+    <ClInclude Include="TelaListaOS.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Login.h">
+    <ClInclude Include="TelaLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="RealizacaoOS.h">
+    <ClInclude Include="TelaRealizacaoOS.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CriarBuraco.resx">
-      <DependentUpon>CriarBuraco.h</DependentUpon>
+    <EmbeddedResource Include="TelaCriarBuraco.resx">
+      <DependentUpon>TelaCriarBuraco.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaOS.resx">
-      <DependentUpon>ListaOS.h</DependentUpon>
+    <EmbeddedResource Include="TelaListaOS.resx">
+      <DependentUpon>TelaListaOS.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealizacaoOS.resx">
-      <DependentUpon>RealizacaoOS.h</DependentUpon>
+    <EmbeddedResource Include="TelaRealizacaoOS.resx">
+      <DependentUpon>TelaRealizacaoOS.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.h</DependentUpon>
+    <EmbeddedResource Include="TelaLogin.resx">
+      <DependentUpon>TelaLogin.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

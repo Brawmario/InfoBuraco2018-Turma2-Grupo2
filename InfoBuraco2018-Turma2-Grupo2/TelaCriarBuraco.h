@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Summary for CriarBuraco
 	/// </summary>
-	public ref class CriarBuraco : public System::Windows::Forms::Form
+	public ref class TelaCriarBuraco : public System::Windows::Forms::Form
 	{
 	public:
-		CriarBuraco(void)
+		TelaCriarBuraco(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~CriarBuraco()
+		~TelaCriarBuraco()
 		{
 			if (components)
 			{
@@ -50,6 +50,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Button^  bt3_criarburaco;
 	private: System::Windows::Forms::PictureBox^  pb_criarburaco;
 	private: System::Windows::Forms::TextBox^  tb1_criarburaco;
+
+
 	private: System::Windows::Forms::TextBox^  tb2_criarburaco;
 	private: System::Windows::Forms::TextBox^  tb3_criarburaco;
 	private: System::Windows::Forms::DateTimePicker^  dtp_criarburaco;
@@ -117,7 +119,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb3_criarburaco->Size = System::Drawing::Size(62, 13);
 			this->lb3_criarburaco->TabIndex = 2;
 			this->lb3_criarburaco->Text = L"Fotografias:";
-			this->lb3_criarburaco->Click += gcnew System::EventHandler(this, &CriarBuraco::label3_Click);
+			this->lb3_criarburaco->Click += gcnew System::EventHandler(this, &TelaCriarBuraco::label3_Click);
 			// 
 			// chkb_criarburaco
 			// 
@@ -128,7 +130,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->chkb_criarburaco->TabIndex = 4;
 			this->chkb_criarburaco->Text = L"Buraco Já Existente";
 			this->chkb_criarburaco->UseVisualStyleBackColor = true;
-			this->chkb_criarburaco->CheckedChanged += gcnew System::EventHandler(this, &CriarBuraco::chkb_criarburaco_CheckedChanged);
+			this->chkb_criarburaco->CheckedChanged += gcnew System::EventHandler(this, &TelaCriarBuraco::chkb_criarburaco_CheckedChanged);
 			// 
 			// cb1_criarburaco
 			// 
@@ -169,7 +171,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb6_criarburaco->Size = System::Drawing::Size(90, 13);
 			this->lb6_criarburaco->TabIndex = 8;
 			this->lb6_criarburaco->Text = L"Posição Relativa:";
-			this->lb6_criarburaco->Click += gcnew System::EventHandler(this, &CriarBuraco::label6_Click);
+			this->lb6_criarburaco->Click += gcnew System::EventHandler(this, &TelaCriarBuraco::label6_Click);
 			// 
 			// lb7_criarburaco
 			// 
@@ -267,7 +269,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->dtp_criarburaco->Size = System::Drawing::Size(121, 20);
 			this->dtp_criarburaco->TabIndex = 19;
 			// 
-			// CriarBuraco
+			// TelaCriarBuraco
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -291,9 +293,9 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb3_criarburaco);
 			this->Controls->Add(this->lb2_criarburaco);
 			this->Controls->Add(this->lb1_criarburaco);
-			this->Name = L"CriarBuraco";
+			this->Name = L"TelaCriarBuraco";
 			this->Text = L"CriarBuraco";
-			this->Load += gcnew System::EventHandler(this, &CriarBuraco::CriarBuraco_Load);
+			this->Load += gcnew System::EventHandler(this, &TelaCriarBuraco::CriarBuraco_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_criarburaco))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

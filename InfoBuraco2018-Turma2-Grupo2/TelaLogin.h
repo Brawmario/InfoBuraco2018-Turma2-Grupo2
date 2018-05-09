@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Summary for Login
 	/// </summary>
-	public ref class Login : public System::Windows::Forms::Form
+	public ref class TelaLogin : public System::Windows::Forms::Form
 	{
 	public:
-		Login(void)
+		TelaLogin(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Login()
+		~TelaLogin()
 		{
 			if (components)
 			{

@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Summary for RealizacaoOS
 	/// </summary>
-	public ref class RealizacaoOS : public System::Windows::Forms::Form
+	public ref class TelaRealizacaoOS : public System::Windows::Forms::Form
 	{
 	public:
-		RealizacaoOS(void)
+		TelaRealizacaoOS(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~RealizacaoOS()
+		~TelaRealizacaoOS()
 		{
 			if (components)
 			{
@@ -123,7 +123,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb1_realizacaoos->Name = L"cb1_realizacaoos";
 			this->cb1_realizacaoos->Size = System::Drawing::Size(121, 21);
 			this->cb1_realizacaoos->TabIndex = 5;
-			this->cb1_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &RealizacaoOS::comboBox1_SelectedIndexChanged);
+			this->cb1_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox1_SelectedIndexChanged);
 			// 
 			// comboBox2
 			// 
@@ -133,7 +133,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb2_realizacaoos->Name = L"cb2_realizacaoos";
 			this->cb2_realizacaoos->Size = System::Drawing::Size(121, 21);
 			this->cb2_realizacaoos->TabIndex = 6;
-			this->cb2_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &RealizacaoOS::comboBox2_SelectedIndexChanged);
+			this->cb2_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox2_SelectedIndexChanged);
 			// 
 			// comboBox3
 			// 
@@ -143,7 +143,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb3_realizacaoos->Name = L"cb3_realizacaoos";
 			this->cb3_realizacaoos->Size = System::Drawing::Size(121, 21);
 			this->cb3_realizacaoos->TabIndex = 7;
-			this->cb3_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &RealizacaoOS::comboBox3_SelectedIndexChanged);
+			this->cb3_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox3_SelectedIndexChanged);
 			// 
 			// button1
 			// 
@@ -180,7 +180,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb1_realizacaoos);
 			this->Name = L"RealizacaoOS";
 			this->Text = L"RealizacaoOS";
-			this->Load += gcnew System::EventHandler(this, &RealizacaoOS::RealizacaoOS_Load);
+			this->Load += gcnew System::EventHandler(this, &TelaRealizacaoOS::RealizacaoOS_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

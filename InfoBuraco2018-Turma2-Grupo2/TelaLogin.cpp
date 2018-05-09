@@ -1,4 +1,4 @@
-#include "Login.h"
+#include "TelaLogin.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -10,6 +10,6 @@ void Main(array<String^>^ args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	InfoBuraco2018Turma2Grupo2::Login login;
+	InfoBuraco2018Turma2Grupo2::TelaLogin login;
 	Application::Run(%login);
 }

@@ -15,38 +15,44 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Login.cpp">
+    <ClCompile Include="TelaCriarBuraco.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListaOS.cpp">
+    <ClCompile Include="TelaListaOS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RealizacaoOS.cpp">
+    <ClCompile Include="TelaLogin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CriarBuraco.cpp">
+    <ClCompile Include="TelaRealizacaoOS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Login.h">
+    <ClInclude Include="TelaCriarBuraco.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ListaOS.h">
+    <ClInclude Include="TelaListaOS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RealizacaoOS.h">
+    <ClInclude Include="TelaLogin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CriarBuraco.h">
+    <ClInclude Include="TelaRealizacaoOS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ListaOS.resx">
+    <EmbeddedResource Include="TelaCriarBuraco.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealizacaoOS.resx">
+    <EmbeddedResource Include="TelaListaOS.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaLogin.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRealizacaoOS.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

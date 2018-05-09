@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Summary for ListaOS
 	/// </summary>
-	public ref class ListaOS : public System::Windows::Forms::Form
+	public ref class TelaListaOS : public System::Windows::Forms::Form
 	{
 	public:
-		ListaOS(void)
+		TelaListaOS(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~ListaOS()
+		~TelaListaOS()
 		{
 			if (components)
 			{
@@ -97,7 +97,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lbox_listaos->Name = L"lbox_listaos";
 			this->lbox_listaos->Size = System::Drawing::Size(108, 277);
 			this->lbox_listaos->TabIndex = 0;
-			this->lbox_listaos->SelectedIndexChanged += gcnew System::EventHandler(this, &ListaOS::listBox1_SelectedIndexChanged);
+			this->lbox_listaos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaListaOS::listBox1_SelectedIndexChanged);
 			// 
 			// button1
 			// 
@@ -250,7 +250,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lbox_listaos);
 			this->Name = L"ListaOS";
 			this->Text = L"ListaOS";
-			this->Load += gcnew System::EventHandler(this, &ListaOS::ListaOS_Load);
+			this->Load += gcnew System::EventHandler(this, &TelaListaOS::ListaOS_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
