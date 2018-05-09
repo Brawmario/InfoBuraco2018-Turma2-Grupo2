@@ -34,9 +34,12 @@ namespace InfoBuraco2018Turma2Grupo2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox1;
+	private: System::Windows::Forms::MaskedTextBox^  mtb_dataInicial;
+	private: System::Windows::Forms::MaskedTextBox^  mtb_dataFinal;
 	protected:
-	private: System::Windows::Forms::MaskedTextBox^  maskedTextBox2;
+
+	protected:
+
 	private: System::Windows::Forms::Label^  lb_de;
 
 	private: System::Windows::Forms::Label^  lb_até;
@@ -45,6 +48,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  bt_aplicarFiltros;
+	private: System::Windows::Forms::Label^  lb_históricoDePagamentos;
 
 
 	protected:
@@ -62,32 +66,33 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
-			this->maskedTextBox2 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->mtb_dataInicial = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->mtb_dataFinal = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->lb_de = (gcnew System::Windows::Forms::Label());
 			this->lb_até = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->bt_aplicarFiltros = (gcnew System::Windows::Forms::Button());
+			this->lb_históricoDePagamentos = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// maskedTextBox1
+			// mtb_dataInicial
 			// 
-			this->maskedTextBox1->Location = System::Drawing::Point(88, 72);
-			this->maskedTextBox1->Mask = L"00/00/0000";
-			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(65, 20);
-			this->maskedTextBox1->TabIndex = 0;
-			this->maskedTextBox1->ValidatingType = System::DateTime::typeid;
+			this->mtb_dataInicial->Location = System::Drawing::Point(88, 72);
+			this->mtb_dataInicial->Mask = L"00/00/0000";
+			this->mtb_dataInicial->Name = L"mtb_dataInicial";
+			this->mtb_dataInicial->Size = System::Drawing::Size(65, 20);
+			this->mtb_dataInicial->TabIndex = 0;
+			this->mtb_dataInicial->ValidatingType = System::DateTime::typeid;
 			// 
-			// maskedTextBox2
+			// mtb_dataFinal
 			// 
-			this->maskedTextBox2->Location = System::Drawing::Point(210, 72);
-			this->maskedTextBox2->Mask = L"00/00/0000";
-			this->maskedTextBox2->Name = L"maskedTextBox2";
-			this->maskedTextBox2->Size = System::Drawing::Size(65, 20);
-			this->maskedTextBox2->TabIndex = 1;
-			this->maskedTextBox2->ValidatingType = System::DateTime::typeid;
+			this->mtb_dataFinal->Location = System::Drawing::Point(210, 72);
+			this->mtb_dataFinal->Mask = L"00/00/0000";
+			this->mtb_dataFinal->Name = L"mtb_dataFinal";
+			this->mtb_dataFinal->Size = System::Drawing::Size(65, 20);
+			this->mtb_dataFinal->TabIndex = 1;
+			this->mtb_dataFinal->ValidatingType = System::DateTime::typeid;
 			// 
 			// lb_de
 			// 
@@ -136,18 +141,29 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_aplicarFiltros->Text = L"Aplicar Filtros";
 			this->bt_aplicarFiltros->UseVisualStyleBackColor = true;
 			// 
+			// lb_históricoDePagamentos
+			// 
+			this->lb_históricoDePagamentos->AutoSize = true;
+			this->lb_históricoDePagamentos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->lb_históricoDePagamentos->Location = System::Drawing::Point(129, 21);
+			this->lb_históricoDePagamentos->Name = L"lb_históricoDePagamentos";
+			this->lb_históricoDePagamentos->Size = System::Drawing::Size(166, 17);
+			this->lb_históricoDePagamentos->TabIndex = 7;
+			this->lb_históricoDePagamentos->Text = L"Histórico de Pagamentos";
+			// 
 			// TelaHistóricoDePagamentos
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(414, 326);
+			this->Controls->Add(this->lb_históricoDePagamentos);
 			this->Controls->Add(this->bt_aplicarFiltros);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lb_até);
 			this->Controls->Add(this->lb_de);
-			this->Controls->Add(this->maskedTextBox2);
-			this->Controls->Add(this->maskedTextBox1);
+			this->Controls->Add(this->mtb_dataFinal);
+			this->Controls->Add(this->mtb_dataInicial);
 			this->Name = L"TelaHistóricoDePagamentos";
 			this->Text = L"TelaHistóricoDePagamentos";
 			this->ResumeLayout(false);

@@ -41,6 +41,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 
 
 	private: System::Windows::Forms::Label^  lb_novoUsername;
+	private: System::Windows::Forms::Label^  lb_alterarUsername;
+
 
 	protected:
 
@@ -61,11 +63,12 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_voltar = (gcnew System::Windows::Forms::Button());
 			this->bt_finalizar = (gcnew System::Windows::Forms::Button());
 			this->lb_novoUsername = (gcnew System::Windows::Forms::Label());
+			this->lb_alterarUsername = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// tb_novoUsername
 			// 
-			this->tb_novoUsername->Location = System::Drawing::Point(133, 57);
+			this->tb_novoUsername->Location = System::Drawing::Point(133, 65);
 			this->tb_novoUsername->Name = L"tb_novoUsername";
 			this->tb_novoUsername->ShortcutsEnabled = false;
 			this->tb_novoUsername->Size = System::Drawing::Size(104, 20);
@@ -92,17 +95,28 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// lb_novoUsername
 			// 
 			this->lb_novoUsername->AutoSize = true;
-			this->lb_novoUsername->Location = System::Drawing::Point(42, 60);
+			this->lb_novoUsername->Location = System::Drawing::Point(42, 68);
 			this->lb_novoUsername->Name = L"lb_novoUsername";
 			this->lb_novoUsername->Size = System::Drawing::Size(85, 13);
 			this->lb_novoUsername->TabIndex = 3;
 			this->lb_novoUsername->Text = L"Novo username:";
+			// 
+			// lb_alterarUsername
+			// 
+			this->lb_alterarUsername->AutoSize = true;
+			this->lb_alterarUsername->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->lb_alterarUsername->Location = System::Drawing::Point(78, 20);
+			this->lb_alterarUsername->Name = L"lb_alterarUsername";
+			this->lb_alterarUsername->Size = System::Drawing::Size(119, 17);
+			this->lb_alterarUsername->TabIndex = 4;
+			this->lb_alterarUsername->Text = L"Alterar Username";
 			// 
 			// TelaAlterarUsername
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 186);
+			this->Controls->Add(this->lb_alterarUsername);
 			this->Controls->Add(this->lb_novoUsername);
 			this->Controls->Add(this->bt_finalizar);
 			this->Controls->Add(this->bt_voltar);

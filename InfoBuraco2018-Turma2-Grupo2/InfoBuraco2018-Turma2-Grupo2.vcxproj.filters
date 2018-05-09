@@ -18,9 +18,6 @@
     <ClCompile Include="Login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MenuGestor.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="MenuDespachador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,6 +37,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TelaHistóricoDeSaídas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuGestor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaInfraestrutura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaAdicionarNovoEquipamento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaAdicionarNovaEquipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaAdicionarNovoMaterial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,6 +83,18 @@
     <ClInclude Include="TelaHistóricoDeSaídas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TelaInfraestrutura.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaAdicionarNovoEquipamento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaAdicionarNovaEquipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaAdicionarNovoMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
@@ -95,6 +119,18 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaHistóricoDePagamentos.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaHistóricoDeSaídas.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInfraestrutura.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarNovoEquipamento.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarNovaEquipe.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

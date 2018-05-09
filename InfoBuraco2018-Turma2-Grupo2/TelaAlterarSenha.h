@@ -47,6 +47,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Label^  lb_repetirNovaSenha;
 	private: System::Windows::Forms::Button^  bt_voltar;
 	private: System::Windows::Forms::Button^  bt_finalizar;
+	private: System::Windows::Forms::Label^  lb_alterarSenha;
+
 
 
 
@@ -73,33 +75,37 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb_repetirNovaSenha = (gcnew System::Windows::Forms::Label());
 			this->bt_voltar = (gcnew System::Windows::Forms::Button());
 			this->bt_finalizar = (gcnew System::Windows::Forms::Button());
+			this->lb_alterarSenha = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// tb_senhaAtual
 			// 
-			this->tb_senhaAtual->Location = System::Drawing::Point(138, 49);
+			this->tb_senhaAtual->Location = System::Drawing::Point(138, 54);
 			this->tb_senhaAtual->Name = L"tb_senhaAtual";
 			this->tb_senhaAtual->Size = System::Drawing::Size(106, 20);
 			this->tb_senhaAtual->TabIndex = 0;
+			this->tb_senhaAtual->UseSystemPasswordChar = true;
 			// 
 			// tb_novaSenha
 			// 
-			this->tb_novaSenha->Location = System::Drawing::Point(138, 75);
+			this->tb_novaSenha->Location = System::Drawing::Point(138, 80);
 			this->tb_novaSenha->Name = L"tb_novaSenha";
 			this->tb_novaSenha->Size = System::Drawing::Size(106, 20);
 			this->tb_novaSenha->TabIndex = 1;
+			this->tb_novaSenha->UseSystemPasswordChar = true;
 			// 
 			// tb_repetirNovaSenha
 			// 
-			this->tb_repetirNovaSenha->Location = System::Drawing::Point(138, 101);
+			this->tb_repetirNovaSenha->Location = System::Drawing::Point(138, 106);
 			this->tb_repetirNovaSenha->Name = L"tb_repetirNovaSenha";
 			this->tb_repetirNovaSenha->Size = System::Drawing::Size(106, 20);
 			this->tb_repetirNovaSenha->TabIndex = 2;
+			this->tb_repetirNovaSenha->UseSystemPasswordChar = true;
 			// 
 			// lb_senhaAtual
 			// 
 			this->lb_senhaAtual->AutoSize = true;
-			this->lb_senhaAtual->Location = System::Drawing::Point(64, 52);
+			this->lb_senhaAtual->Location = System::Drawing::Point(64, 57);
 			this->lb_senhaAtual->Name = L"lb_senhaAtual";
 			this->lb_senhaAtual->Size = System::Drawing::Size(68, 13);
 			this->lb_senhaAtual->TabIndex = 3;
@@ -108,7 +114,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// lb_novaSenha
 			// 
 			this->lb_novaSenha->AutoSize = true;
-			this->lb_novaSenha->Location = System::Drawing::Point(62, 78);
+			this->lb_novaSenha->Location = System::Drawing::Point(62, 83);
 			this->lb_novaSenha->Name = L"lb_novaSenha";
 			this->lb_novaSenha->Size = System::Drawing::Size(70, 13);
 			this->lb_novaSenha->TabIndex = 4;
@@ -118,7 +124,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// lb_repetirNovaSenha
 			// 
 			this->lb_repetirNovaSenha->AutoSize = true;
-			this->lb_repetirNovaSenha->Location = System::Drawing::Point(25, 104);
+			this->lb_repetirNovaSenha->Location = System::Drawing::Point(25, 109);
 			this->lb_repetirNovaSenha->Name = L"lb_repetirNovaSenha";
 			this->lb_repetirNovaSenha->Size = System::Drawing::Size(107, 13);
 			this->lb_repetirNovaSenha->TabIndex = 5;
@@ -142,11 +148,22 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
 			// 
+			// lb_alterarSenha
+			// 
+			this->lb_alterarSenha->AutoSize = true;
+			this->lb_alterarSenha->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->lb_alterarSenha->Location = System::Drawing::Point(92, 19);
+			this->lb_alterarSenha->Name = L"lb_alterarSenha";
+			this->lb_alterarSenha->Size = System::Drawing::Size(95, 17);
+			this->lb_alterarSenha->TabIndex = 8;
+			this->lb_alterarSenha->Text = L"Alterar Senha";
+			// 
 			// TelaAlterarSenha
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 227);
+			this->Controls->Add(this->lb_alterarSenha);
 			this->Controls->Add(this->bt_finalizar);
 			this->Controls->Add(this->bt_voltar);
 			this->Controls->Add(this->lb_repetirNovaSenha);

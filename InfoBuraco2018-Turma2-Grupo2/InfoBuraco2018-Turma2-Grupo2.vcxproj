@@ -140,17 +140,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TelaAdicionarNovoMaterial.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="MenuAcessoriaDeComunicação.cpp" />
     <ClCompile Include="MenuDespachador.cpp" />
     <ClCompile Include="MenuEncarregadoDaObra.cpp" />
     <ClCompile Include="MenuGestor.cpp" />
+    <ClCompile Include="TelaAdicionarNovaEquipe.cpp" />
+    <ClCompile Include="TelaAdicionarNovoEquipamento.cpp" />
     <ClCompile Include="TelaAlterarSenha.cpp" />
     <ClCompile Include="TelaAlterarUsername.cpp" />
+    <ClCompile Include="TelaInfraestrutura.cpp" />
     <ClCompile Include="TelaHistóricoDePagamentos.cpp" />
     <ClCompile Include="TelaHistóricoDeSaídas.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TelaAdicionarNovoMaterial.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -166,10 +173,19 @@
     <ClInclude Include="MenuGestor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="TelaAdicionarNovaEquipe.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAdicionarNovoEquipamento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="TelaAlterarSenha.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaAlterarUsername.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaInfraestrutura.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaHistóricoDePagamentos.h">
@@ -195,11 +211,23 @@
     <EmbeddedResource Include="MenuGestor.resx">
       <DependentUpon>MenuGestor.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarNovaEquipe.resx">
+      <DependentUpon>TelaAdicionarNovaEquipe.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarNovoEquipamento.resx">
+      <DependentUpon>TelaAdicionarNovoEquipamento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAdicionarNovoMaterial.resx">
+      <DependentUpon>TelaAdicionarNovoMaterial.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaAlterarSenha.resx">
       <DependentUpon>TelaAlterarSenha.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaAlterarUsername.resx">
       <DependentUpon>TelaAlterarUsername.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInfraestrutura.resx">
+      <DependentUpon>TelaInfraestrutura.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaHistóricoDePagamentos.resx">
       <DependentUpon>TelaHistóricoDePagamentos.h</DependentUpon>
