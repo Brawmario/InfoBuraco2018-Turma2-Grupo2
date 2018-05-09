@@ -148,6 +148,9 @@
     <ClCompile Include="MenuGestor.cpp" />
     <ClCompile Include="TelaAdicionarNovaEquipe.cpp" />
     <ClCompile Include="TelaAdicionarNovoEquipamento.cpp" />
+    <ClCompile Include="TelaAlterarEquipamento.cpp" />
+    <ClCompile Include="TelaAlterarEquipe.cpp" />
+    <ClCompile Include="TelaAlterarMaterial.cpp" />
     <ClCompile Include="TelaAlterarSenha.cpp" />
     <ClCompile Include="TelaAlterarUsername.cpp" />
     <ClCompile Include="TelaInfraestrutura.cpp" />
@@ -177,6 +180,15 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaAdicionarNovoEquipamento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarEquipamento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarEquipe.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaAlterarMaterial.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaAlterarSenha.h">
@@ -219,6 +231,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaAdicionarNovoMaterial.resx">
       <DependentUpon>TelaAdicionarNovoMaterial.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarEquipamento.resx">
+      <DependentUpon>TelaAlterarEquipamento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarEquipe.resx">
+      <DependentUpon>TelaAlterarEquipe.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAlterarMaterial.resx">
+      <DependentUpon>TelaAlterarMaterial.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaAlterarSenha.resx">
       <DependentUpon>TelaAlterarSenha.h</DependentUpon>
