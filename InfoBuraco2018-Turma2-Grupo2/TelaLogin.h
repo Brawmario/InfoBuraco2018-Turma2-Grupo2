@@ -52,6 +52,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::ToolStripMenuItem^  tsmi_sair;
 	private: System::Windows::Forms::TextBox^  tb_log;
 	private: System::Windows::Forms::Label^  lb_log;
+	private: System::Windows::Forms::Button^  bt_debugAcessor;
+	private: System::Windows::Forms::Button^  bt_debugGestor;
+	private: System::Windows::Forms::Button^  bt_debugDespachador;
+	private: System::Windows::Forms::Button^  bt_debugEncarregado;
 
 
 
@@ -83,6 +87,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->tsmi_sair = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->tb_log = (gcnew System::Windows::Forms::TextBox());
 			this->lb_log = (gcnew System::Windows::Forms::Label());
+			this->bt_debugAcessor = (gcnew System::Windows::Forms::Button());
+			this->bt_debugGestor = (gcnew System::Windows::Forms::Button());
+			this->bt_debugDespachador = (gcnew System::Windows::Forms::Button());
+			this->bt_debugEncarregado = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -141,7 +149,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->tsm_menu });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(260, 24);
+			this->menuStrip1->Size = System::Drawing::Size(240, 24);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -158,13 +166,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_novaConta
 			// 
 			this->tsmi_novaConta->Name = L"tsmi_novaConta";
-			this->tsmi_novaConta->Size = System::Drawing::Size(180, 22);
+			this->tsmi_novaConta->Size = System::Drawing::Size(161, 22);
 			this->tsmi_novaConta->Text = L"Criar nova conta";
 			// 
 			// tsmi_sair
 			// 
 			this->tsmi_sair->Name = L"tsmi_sair";
-			this->tsmi_sair->Size = System::Drawing::Size(180, 22);
+			this->tsmi_sair->Size = System::Drawing::Size(161, 22);
 			this->tsmi_sair->Text = L"Sair";
 			// 
 			// tb_log
@@ -184,11 +192,51 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb_log->TabIndex = 8;
 			this->lb_log->Text = L"Log de erros:";
 			// 
-			// Login
+			// bt_debugAcessor
+			// 
+			this->bt_debugAcessor->Location = System::Drawing::Point(46, 288);
+			this->bt_debugAcessor->Name = L"bt_debugAcessor";
+			this->bt_debugAcessor->Size = System::Drawing::Size(140, 23);
+			this->bt_debugAcessor->TabIndex = 9;
+			this->bt_debugAcessor->Text = L"Logar como acessor";
+			this->bt_debugAcessor->UseVisualStyleBackColor = true;
+			// 
+			// bt_debugGestor
+			// 
+			this->bt_debugGestor->Location = System::Drawing::Point(46, 317);
+			this->bt_debugGestor->Name = L"bt_debugGestor";
+			this->bt_debugGestor->Size = System::Drawing::Size(140, 23);
+			this->bt_debugGestor->TabIndex = 10;
+			this->bt_debugGestor->Text = L"Logar como  gestor";
+			this->bt_debugGestor->UseVisualStyleBackColor = true;
+			// 
+			// bt_debugDespachador
+			// 
+			this->bt_debugDespachador->Location = System::Drawing::Point(46, 346);
+			this->bt_debugDespachador->Name = L"bt_debugDespachador";
+			this->bt_debugDespachador->Size = System::Drawing::Size(140, 23);
+			this->bt_debugDespachador->TabIndex = 11;
+			this->bt_debugDespachador->Text = L"Logar como despachador";
+			this->bt_debugDespachador->UseVisualStyleBackColor = true;
+			// 
+			// bt_debugEncarregado
+			// 
+			this->bt_debugEncarregado->Location = System::Drawing::Point(46, 375);
+			this->bt_debugEncarregado->Name = L"bt_debugEncarregado";
+			this->bt_debugEncarregado->Size = System::Drawing::Size(140, 23);
+			this->bt_debugEncarregado->TabIndex = 12;
+			this->bt_debugEncarregado->Text = L"Logar como encarregado";
+			this->bt_debugEncarregado->UseVisualStyleBackColor = true;
+			// 
+			// TelaLogin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(260, 281);
+			this->ClientSize = System::Drawing::Size(240, 407);
+			this->Controls->Add(this->bt_debugEncarregado);
+			this->Controls->Add(this->bt_debugDespachador);
+			this->Controls->Add(this->bt_debugGestor);
+			this->Controls->Add(this->bt_debugAcessor);
 			this->Controls->Add(this->lb_log);
 			this->Controls->Add(this->tb_log);
 			this->Controls->Add(this->button2);
@@ -199,7 +247,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb_login);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Name = L"Login";
+			this->Name = L"TelaLogin";
 			this->Text = L"Login";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
