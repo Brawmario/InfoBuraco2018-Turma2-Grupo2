@@ -148,6 +148,7 @@
     <ClCompile Include="TelaAlterarSenha.cpp" />
     <ClCompile Include="TelaAlterarUsername.cpp" />
     <ClCompile Include="TelaHistóricoDePagamentos.cpp" />
+    <ClCompile Include="TelaHistóricoDeSaídas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
@@ -172,6 +173,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaHistóricoDePagamentos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaHistóricoDeSaídas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -199,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaHistóricoDePagamentos.resx">
       <DependentUpon>TelaHistóricoDePagamentos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaHistóricoDeSaídas.resx">
+      <DependentUpon>TelaHistóricoDeSaídas.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

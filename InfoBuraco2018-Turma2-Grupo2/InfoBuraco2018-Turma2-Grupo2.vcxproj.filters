@@ -39,6 +39,9 @@
     <ClCompile Include="TelaHistóricoDePagamentos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TelaHistóricoDeSaídas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
@@ -65,6 +68,9 @@
     <ClInclude Include="TelaHistóricoDePagamentos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TelaHistóricoDeSaídas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
@@ -86,6 +92,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaAlterarSenha.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaHistóricoDePagamentos.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
