@@ -120,21 +120,21 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_alterarUsername
 			// 
 			this->tsmi_alterarUsername->Name = L"tsmi_alterarUsername";
-			this->tsmi_alterarUsername->Size = System::Drawing::Size(180, 22);
+			this->tsmi_alterarUsername->Size = System::Drawing::Size(164, 22);
 			this->tsmi_alterarUsername->Text = L"Alterar username";
 			this->tsmi_alterarUsername->Click += gcnew System::EventHandler(this, &MenuAcessoriaDeComunicação::tsmi_alterarUsername_TelaAlterarUsername);
 			// 
 			// tsmi_alterarSenha
 			// 
 			this->tsmi_alterarSenha->Name = L"tsmi_alterarSenha";
-			this->tsmi_alterarSenha->Size = System::Drawing::Size(180, 22);
+			this->tsmi_alterarSenha->Size = System::Drawing::Size(164, 22);
 			this->tsmi_alterarSenha->Text = L"Alterar senha";
 			this->tsmi_alterarSenha->Click += gcnew System::EventHandler(this, &MenuAcessoriaDeComunicação::tsmi_alterarSenha_TelaMudarSenha);
 			// 
 			// tsmi_signOut
 			// 
 			this->tsmi_signOut->Name = L"tsmi_signOut";
-			this->tsmi_signOut->Size = System::Drawing::Size(180, 22);
+			this->tsmi_signOut->Size = System::Drawing::Size(164, 22);
 			this->tsmi_signOut->Text = L"Sign Out";
 			this->tsmi_signOut->Click += gcnew System::EventHandler(this, &MenuAcessoriaDeComunicação::tsmi_signOut_Sair);
 			// 
@@ -186,6 +186,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->bt_registrarNovoBuraco);
 			this->Name = L"MenuAcessoriaDeComunicação";
 			this->Text = L"MenuAcessoriaDeComunicação";
+			this->Load += gcnew System::EventHandler(this, &MenuAcessoriaDeComunicação::MenuAcessoriaDeComunicação_Load);
 			this->ts_usuário->ResumeLayout(false);
 			this->ts_usuário->PerformLayout();
 			this->ResumeLayout(false);
@@ -209,6 +210,8 @@ private: System::Void tsmi_alterarSenha_TelaMudarSenha(System::Object^  sender, 
 }
 private: System::Void tsmi_signOut_Sair(System::Object^  sender, System::EventArgs^  e) {
 	Close();
+}
+private: System::Void MenuAcessoriaDeComunicação_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
