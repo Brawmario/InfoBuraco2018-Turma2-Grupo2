@@ -48,6 +48,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Button^  bt_voltar;
 	private: System::Windows::Forms::Button^  bt_finalizar;
 	private: System::Windows::Forms::Label^  lb_alterarSenha;
+	private: System::Windows::Forms::RichTextBox^  rtb_erro;
+	private: System::Windows::Forms::Label^  lb_telaDeErro;
+
+
 
 
 
@@ -76,6 +80,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_voltar = (gcnew System::Windows::Forms::Button());
 			this->bt_finalizar = (gcnew System::Windows::Forms::Button());
 			this->lb_alterarSenha = (gcnew System::Windows::Forms::Label());
+			this->rtb_erro = (gcnew System::Windows::Forms::RichTextBox());
+			this->lb_telaDeErro = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// tb_senhaAtual
@@ -132,21 +138,23 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// 
 			// bt_voltar
 			// 
-			this->bt_voltar->Location = System::Drawing::Point(38, 158);
+			this->bt_voltar->Location = System::Drawing::Point(38, 248);
 			this->bt_voltar->Name = L"bt_voltar";
 			this->bt_voltar->Size = System::Drawing::Size(81, 26);
 			this->bt_voltar->TabIndex = 6;
 			this->bt_voltar->Text = L"Voltar";
 			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaAlterarSenha::bt_voltar_Sair);
 			// 
 			// bt_finalizar
 			// 
-			this->bt_finalizar->Location = System::Drawing::Point(163, 158);
+			this->bt_finalizar->Location = System::Drawing::Point(163, 248);
 			this->bt_finalizar->Name = L"bt_finalizar";
 			this->bt_finalizar->Size = System::Drawing::Size(81, 26);
 			this->bt_finalizar->TabIndex = 7;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAlterarSenha::bt_finalizar_Encerrar);
 			// 
 			// lb_alterarSenha
 			// 
@@ -158,11 +166,31 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb_alterarSenha->TabIndex = 8;
 			this->lb_alterarSenha->Text = L"Alterar Senha";
 			// 
+			// rtb_erro
+			// 
+			this->rtb_erro->Location = System::Drawing::Point(47, 159);
+			this->rtb_erro->Name = L"rtb_erro";
+			this->rtb_erro->ReadOnly = true;
+			this->rtb_erro->Size = System::Drawing::Size(197, 72);
+			this->rtb_erro->TabIndex = 9;
+			this->rtb_erro->Text = L"";
+			// 
+			// lb_telaDeErro
+			// 
+			this->lb_telaDeErro->AutoSize = true;
+			this->lb_telaDeErro->Location = System::Drawing::Point(52, 140);
+			this->lb_telaDeErro->Name = L"lb_telaDeErro";
+			this->lb_telaDeErro->Size = System::Drawing::Size(68, 13);
+			this->lb_telaDeErro->TabIndex = 10;
+			this->lb_telaDeErro->Text = L"Tela de Erro:";
+			// 
 			// TelaAlterarSenha
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 227);
+			this->ClientSize = System::Drawing::Size(284, 328);
+			this->Controls->Add(this->lb_telaDeErro);
+			this->Controls->Add(this->rtb_erro);
 			this->Controls->Add(this->lb_alterarSenha);
 			this->Controls->Add(this->bt_finalizar);
 			this->Controls->Add(this->bt_voltar);
@@ -174,6 +202,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->tb_senhaAtual);
 			this->Name = L"TelaAlterarSenha";
 			this->Text = L"TelaAlterarSenha";
+			this->Load += gcnew System::EventHandler(this, &TelaAlterarSenha::TelaAlterarSenha_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -181,5 +210,18 @@ namespace InfoBuraco2018Turma2Grupo2 {
 #pragma endregion
 	private: System::Void lb_novaSenha_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void TelaAlterarSenha_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void bt_voltar_Sair(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+	private: System::Void bt_finalizar_Encerrar(System::Object^  sender, System::EventArgs^  e) {
+		if (this->tb_novaSenha->Text == this->tb_repetirNovaSenha->Text) {
+			Close();
+		}
+		else {
+			this->rtb_erro->Text = L"Erro:Senha nos campos 'Nova Senha' e 'Repetir Nova Senha' diferentes uns dos outros. ";
+		}
+}
 };
 }
