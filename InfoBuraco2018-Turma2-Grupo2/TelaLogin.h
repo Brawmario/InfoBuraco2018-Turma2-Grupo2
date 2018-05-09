@@ -1,4 +1,9 @@
 #pragma once
+#include <iostream>
+#include "MenuDespachador.h"
+#include "MenuAcessoriaDeComunicação.h"
+#include "MenuEncarregadoDaObra.h"
+#include "MenuGestor.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -168,14 +173,15 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_novaConta
 			// 
 			this->tsmi_novaConta->Name = L"tsmi_novaConta";
-			this->tsmi_novaConta->Size = System::Drawing::Size(161, 22);
+			this->tsmi_novaConta->Size = System::Drawing::Size(180, 22);
 			this->tsmi_novaConta->Text = L"Criar nova conta";
 			// 
 			// tsmi_sair
 			// 
 			this->tsmi_sair->Name = L"tsmi_sair";
-			this->tsmi_sair->Size = System::Drawing::Size(161, 22);
+			this->tsmi_sair->Size = System::Drawing::Size(180, 22);
 			this->tsmi_sair->Text = L"Sair";
+			this->tsmi_sair->Click += gcnew System::EventHandler(this, &TelaLogin::tsmi_sair_Sair);
 			// 
 			// tb_log
 			// 
@@ -202,6 +208,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_debugAcessor->TabIndex = 9;
 			this->bt_debugAcessor->Text = L"Logar como acessor";
 			this->bt_debugAcessor->UseVisualStyleBackColor = true;
+			this->bt_debugAcessor->Click += gcnew System::EventHandler(this, &TelaLogin::bt_debugAcessor_Logar);
 			// 
 			// bt_debugGestor
 			// 
@@ -211,6 +218,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_debugGestor->TabIndex = 10;
 			this->bt_debugGestor->Text = L"Logar como  gestor";
 			this->bt_debugGestor->UseVisualStyleBackColor = true;
+			this->bt_debugGestor->Click += gcnew System::EventHandler(this, &TelaLogin::bt_debugGestor_Logar);
 			// 
 			// bt_debugDespachador
 			// 
@@ -220,6 +228,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_debugDespachador->TabIndex = 11;
 			this->bt_debugDespachador->Text = L"Logar como despachador";
 			this->bt_debugDespachador->UseVisualStyleBackColor = true;
+			this->bt_debugDespachador->Click += gcnew System::EventHandler(this, &TelaLogin::bt_debugDespachador_Logar);
 			// 
 			// bt_debugEncarregado
 			// 
@@ -229,6 +238,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_debugEncarregado->TabIndex = 12;
 			this->bt_debugEncarregado->Text = L"Logar como encarregado";
 			this->bt_debugEncarregado->UseVisualStyleBackColor = true;
+			this->bt_debugEncarregado->Click += gcnew System::EventHandler(this, &TelaLogin::bt_debugEncarregado_Logar);
 			// 
 			// TelaLogin
 			// 
@@ -262,6 +272,26 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 	}
 private: System::Void Login_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void bt_debugAcessor_Logar(System::Object^  sender, System::EventArgs^  e) {
+	MenuAcessoriaDeComunicação^ Acessoria = gcnew MenuAcessoriaDeComunicação();
+	Acessoria->ShowDialog();
+}
+private: System::Void bt_debugGestor_Logar(System::Object^  sender, System::EventArgs^  e) {
+	MenuGestor^ Gestor = gcnew MenuGestor();
+	Gestor->ShowDialog();
+}
+private: System::Void bt_debugDespachador_Logar(System::Object^  sender, System::EventArgs^  e) {
+	MenuDespachador^ Despachador = gcnew MenuDespachador();
+	Despachador->ShowDialog();
+}
+private: System::Void bt_debugEncarregado_Logar(System::Object^  sender, System::EventArgs^  e) {
+	MenuEncarregadoDaObra^ Encarregado = gcnew MenuEncarregadoDaObra();
+	Encarregado->ShowDialog();
+}
+
+private: System::Void tsmi_sair_Sair(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
 }
 };
 }
