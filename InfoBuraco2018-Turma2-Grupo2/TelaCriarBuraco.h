@@ -190,6 +190,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt1_criarburaco->TabIndex = 10;
 			this->bt1_criarburaco->Text = L"Voltar";
 			this->bt1_criarburaco->UseVisualStyleBackColor = true;
+			this->bt1_criarburaco->Click += gcnew System::EventHandler(this, &TelaCriarBuraco::bt1_criarburaco_Click);
 			// 
 			// bt2_criarburaco
 			// 
@@ -199,6 +200,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt2_criarburaco->TabIndex = 11;
 			this->bt2_criarburaco->Text = L"Criar";
 			this->bt2_criarburaco->UseVisualStyleBackColor = true;
+			this->bt2_criarburaco->Click += gcnew System::EventHandler(this, &TelaCriarBuraco::bt2_criarburaco_Click);
 			// 
 			// cb2_criarburaco
 			// 
@@ -323,6 +325,12 @@ private: System::Void chkb_criarburaco_CheckedChanged(System::Object^  sender, S
 		this->cb2_criarburaco->Enabled = true;
 		this->cb3_criarburaco->Enabled = true;
 	}
+}
+private: System::Void bt2_criarburaco_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt1_criarburaco_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

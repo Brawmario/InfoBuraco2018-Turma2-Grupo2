@@ -71,7 +71,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt2_realizacaoos = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// label1
+			// lb1_realizacaoos
 			// 
 			this->lb1_realizacaoos->AutoSize = true;
 			this->lb1_realizacaoos->Location = System::Drawing::Point(12, 58);
@@ -80,7 +80,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb1_realizacaoos->TabIndex = 0;
 			this->lb1_realizacaoos->Text = L"Data:";
 			// 
-			// label2
+			// lb2_realizacaoos
 			// 
 			this->lb2_realizacaoos->AutoSize = true;
 			this->lb2_realizacaoos->Location = System::Drawing::Point(12, 90);
@@ -89,7 +89,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb2_realizacaoos->TabIndex = 1;
 			this->lb2_realizacaoos->Text = L"Grupo:";
 			// 
-			// label3
+			// lb3_realizacaoos
 			// 
 			this->lb3_realizacaoos->AutoSize = true;
 			this->lb3_realizacaoos->Location = System::Drawing::Point(12, 119);
@@ -98,7 +98,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb3_realizacaoos->TabIndex = 2;
 			this->lb3_realizacaoos->Text = L"OS:";
 			// 
-			// label4
+			// lb4_realizacaoos
 			// 
 			this->lb4_realizacaoos->AutoSize = true;
 			this->lb4_realizacaoos->Location = System::Drawing::Point(12, 153);
@@ -107,7 +107,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb4_realizacaoos->TabIndex = 3;
 			this->lb4_realizacaoos->Text = L"Status da OS:";
 			// 
-			// dateTimePicker1
+			// dtp_realizacaoos
 			// 
 			this->dtp_realizacaoos->CustomFormat = L"\"dd/MM/yyyy\"";
 			this->dtp_realizacaoos->Location = System::Drawing::Point(97, 51);
@@ -115,7 +115,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->dtp_realizacaoos->Size = System::Drawing::Size(200, 20);
 			this->dtp_realizacaoos->TabIndex = 4;
 			// 
-			// comboBox1
+			// cb1_realizacaoos
 			// 
 			this->cb1_realizacaoos->FormattingEnabled = true;
 			this->cb1_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Grupo 1", L"Grupo 2", L"Grupo 3" });
@@ -125,7 +125,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb1_realizacaoos->TabIndex = 5;
 			this->cb1_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox1_SelectedIndexChanged);
 			// 
-			// comboBox2
+			// cb2_realizacaoos
 			// 
 			this->cb2_realizacaoos->FormattingEnabled = true;
 			this->cb2_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Em Andamento", L"Concluída" });
@@ -135,7 +135,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb2_realizacaoos->TabIndex = 6;
 			this->cb2_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox2_SelectedIndexChanged);
 			// 
-			// comboBox3
+			// cb3_realizacaoos
 			// 
 			this->cb3_realizacaoos->FormattingEnabled = true;
 			this->cb3_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"OS0", L"OS1", L"OS2", L"OS3", L"OS4" });
@@ -145,7 +145,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb3_realizacaoos->TabIndex = 7;
 			this->cb3_realizacaoos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaRealizacaoOS::comboBox3_SelectedIndexChanged);
 			// 
-			// button1
+			// bt1_realizacaoos
 			// 
 			this->bt1_realizacaoos->Location = System::Drawing::Point(38, 201);
 			this->bt1_realizacaoos->Name = L"bt1_realizacaoos";
@@ -153,8 +153,9 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt1_realizacaoos->TabIndex = 8;
 			this->bt1_realizacaoos->Text = L"Voltar";
 			this->bt1_realizacaoos->UseVisualStyleBackColor = true;
+			this->bt1_realizacaoos->Click += gcnew System::EventHandler(this, &TelaRealizacaoOS::bt1_realizacaoos_Click);
 			// 
-			// button2
+			// bt2_realizacaoos
 			// 
 			this->bt2_realizacaoos->Location = System::Drawing::Point(199, 201);
 			this->bt2_realizacaoos->Name = L"bt2_realizacaoos";
@@ -162,8 +163,9 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt2_realizacaoos->TabIndex = 9;
 			this->bt2_realizacaoos->Text = L"Registrar";
 			this->bt2_realizacaoos->UseVisualStyleBackColor = true;
+			this->bt2_realizacaoos->Click += gcnew System::EventHandler(this, &TelaRealizacaoOS::bt2_realizacaoos_Click);
 			// 
-			// RealizacaoOS
+			// TelaRealizacaoOS
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -178,7 +180,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb3_realizacaoos);
 			this->Controls->Add(this->lb2_realizacaoos);
 			this->Controls->Add(this->lb1_realizacaoos);
-			this->Name = L"RealizacaoOS";
+			this->Name = L"TelaRealizacaoOS";
 			this->Text = L"RealizacaoOS";
 			this->Load += gcnew System::EventHandler(this, &TelaRealizacaoOS::RealizacaoOS_Load);
 			this->ResumeLayout(false);
@@ -193,6 +195,12 @@ private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, Sy
 private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void RealizacaoOS_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void bt1_realizacaoos_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt2_realizacaoos_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

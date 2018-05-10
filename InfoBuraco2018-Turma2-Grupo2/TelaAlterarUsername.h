@@ -82,6 +82,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_voltar->TabIndex = 1;
 			this->bt_voltar->Text = L"Voltar";
 			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaAlterarUsername::bt_voltar_Sair);
 			// 
 			// bt_finalizar
 			// 
@@ -91,6 +92,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 2;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAlterarUsername::bt_finalizar_Encerrar);
 			// 
 			// lb_novoUsername
 			// 
@@ -123,10 +125,19 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->tb_novoUsername);
 			this->Name = L"TelaAlterarUsername";
 			this->Text = L"TelaAlterarUsername";
+			this->Load += gcnew System::EventHandler(this, &TelaAlterarUsername::TelaAlterarUsername_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+	private: System::Void TelaAlterarUsername_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+private: System::Void bt_voltar_Sair(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_finalizar_Encerrar(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+};
 }
