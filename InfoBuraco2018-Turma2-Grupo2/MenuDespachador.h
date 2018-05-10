@@ -1,4 +1,11 @@
 #pragma once
+#include <iostream>
+#include "TelaAlterarSenha.h"
+#include "TelaAlterarUsername.h"
+#include "TelaInfraestrutura.h"
+#include "TelaListaOS.h"
+#include "TelaHistóricoDeSaídas.h"
+#include "TelaHistóricoDePagamentos.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -96,6 +103,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_infraestrutura->TabStop = false;
 			this->bt_infraestrutura->Text = L"Infraestrutura";
 			this->bt_infraestrutura->UseVisualStyleBackColor = true;
+			this->bt_infraestrutura->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_infraestrutura_Click);
 			// 
 			// bt_listaDeBuracos
 			// 
@@ -116,6 +124,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_listaDeOS->TabIndex = 2;
 			this->bt_listaDeOS->Text = L"Lista de OS";
 			this->bt_listaDeOS->UseVisualStyleBackColor = true;
+			this->bt_listaDeOS->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_listaDeOS_Click);
 			// 
 			// bt_formulaçãoDePlanoDeSaída
 			// 
@@ -136,6 +145,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_históricoDeSaídas->TabIndex = 4;
 			this->bt_históricoDeSaídas->Text = L"Histórico de Saídas";
 			this->bt_históricoDeSaídas->UseVisualStyleBackColor = true;
+			this->bt_históricoDeSaídas->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_históricoDeSaídas_Click);
 			// 
 			// bt_históricoDePagamentos
 			// 
@@ -145,6 +155,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_históricoDePagamentos->TabIndex = 5;
 			this->bt_históricoDePagamentos->Text = L"Histórico de Pagamentos";
 			this->bt_históricoDePagamentos->UseVisualStyleBackColor = true;
+			this->bt_históricoDePagamentos->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_históricoDePagamentos_Click);
 			// 
 			// lb_menuPrincipal
 			// 
@@ -185,20 +196,23 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_alterarUsername
 			// 
 			this->tsmi_alterarUsername->Name = L"tsmi_alterarUsername";
-			this->tsmi_alterarUsername->Size = System::Drawing::Size(180, 22);
+			this->tsmi_alterarUsername->Size = System::Drawing::Size(164, 22);
 			this->tsmi_alterarUsername->Text = L"Alterar username";
+			this->tsmi_alterarUsername->Click += gcnew System::EventHandler(this, &MenuDespachador::tsmi_alterarUsername_Click);
 			// 
 			// tsmi_alterarSenha
 			// 
 			this->tsmi_alterarSenha->Name = L"tsmi_alterarSenha";
-			this->tsmi_alterarSenha->Size = System::Drawing::Size(180, 22);
+			this->tsmi_alterarSenha->Size = System::Drawing::Size(164, 22);
 			this->tsmi_alterarSenha->Text = L"Alterar senha";
+			this->tsmi_alterarSenha->Click += gcnew System::EventHandler(this, &MenuDespachador::tsmi_alterarSenha_Click);
 			// 
 			// tsmi_signOut
 			// 
 			this->tsmi_signOut->Name = L"tsmi_signOut";
-			this->tsmi_signOut->Size = System::Drawing::Size(180, 22);
+			this->tsmi_signOut->Size = System::Drawing::Size(164, 22);
 			this->tsmi_signOut->Text = L"Sign Out";
+			this->tsmi_signOut->Click += gcnew System::EventHandler(this, &MenuDespachador::tsmi_signOut_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -242,5 +256,32 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	}
 	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void tsmi_alterarUsername_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarUsername^ MudarUsername = gcnew TelaAlterarUsername();
+	MudarUsername->ShowDialog();
+}
+private: System::Void tsmi_alterarSenha_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarSenha^ MudarSenha = gcnew TelaAlterarSenha();
+	MudarSenha->ShowDialog();
+}
+private: System::Void tsmi_signOut_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_infraestrutura_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaInfraestrutura^ Infraestrutura = gcnew TelaInfraestrutura();
+	Infraestrutura->ShowDialog();
+}
+private: System::Void bt_listaDeOS_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaListaOS^ ListaOS = gcnew TelaListaOS();
+	ListaOS->ShowDialog();
+}
+private: System::Void bt_históricoDeSaídas_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaHistóricoDeSaídas^ HistóricoSaídas = gcnew TelaHistóricoDeSaídas();
+	HistóricoSaídas->ShowDialog();
+}
+private: System::Void bt_históricoDePagamentos_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaHistóricoDePagamentos^ HistóricoPagamentos = gcnew TelaHistóricoDePagamentos();
+	HistóricoPagamentos->ShowDialog();
+}
 };
 }

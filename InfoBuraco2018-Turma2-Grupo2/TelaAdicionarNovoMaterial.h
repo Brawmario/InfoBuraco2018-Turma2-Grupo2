@@ -116,6 +116,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_cancelar->TabIndex = 9;
 			this->bt_cancelar->Text = L"Cancelar";
 			this->bt_cancelar->UseVisualStyleBackColor = true;
+			this->bt_cancelar->Click += gcnew System::EventHandler(this, &TelaAdicionarNovoMaterial::bt_cancelar_Click);
 			// 
 			// bt_finalizar
 			// 
@@ -125,6 +126,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 10;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAdicionarNovoMaterial::bt_finalizar_Click);
 			// 
 			// tb_nome
 			// 
@@ -174,5 +176,11 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	}
 	private: System::Void lb_históricoDePagamentos_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
-	};
+	private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
+	}
+private: System::Void bt_finalizar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+};
 }

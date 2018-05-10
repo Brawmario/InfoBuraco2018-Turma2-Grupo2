@@ -149,6 +149,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_cancelar->TabIndex = 9;
 			this->bt_cancelar->Text = L"Cancelar";
 			this->bt_cancelar->UseVisualStyleBackColor = true;
+			this->bt_cancelar->Click += gcnew System::EventHandler(this, &TelaAdicionarNovaEquipe::bt_cancelar_Click);
 			// 
 			// bt_finalizar
 			// 
@@ -158,6 +159,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 10;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAdicionarNovaEquipe::bt_finalizar_Click);
 			// 
 			// TelaAdicionarNovaEquipe
 			// 
@@ -185,6 +187,12 @@ namespace InfoBuraco2018Turma2Grupo2 {
 private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void maskedTextBox1_MaskInputRejected(System::Object^  sender, System::Windows::Forms::MaskInputRejectedEventArgs^  e) {
+}
+private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_finalizar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

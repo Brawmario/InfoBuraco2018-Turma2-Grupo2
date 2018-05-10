@@ -160,6 +160,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_cancelar->TabIndex = 7;
 			this->bt_cancelar->Text = L"Cancelar";
 			this->bt_cancelar->UseVisualStyleBackColor = true;
+			this->bt_cancelar->Click += gcnew System::EventHandler(this, &TelaAlterarEquipamento::bt_cancelar_Click);
 			// 
 			// bt_finalizar
 			// 
@@ -169,6 +170,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 8;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAlterarEquipamento::bt_finalizar_Click);
 			// 
 			// TelaAlterarEquipamento
 			// 
@@ -194,6 +196,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 #pragma endregion
 	private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		this->tb_novaIdentificação->Enabled = this->cb_alterarIdentificação->Checked;
+		this->lb_novaIdentificação->Enabled = this->cb_alterarIdentificação->Checked;
 	}
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
@@ -205,8 +208,15 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	}
 private: System::Void checkBox2_CheckedChange(System::Object^  sender, System::EventArgs^  e) {
 	this->tb_novoCustoDeUso->Enabled = this->cb_alterarCustoDeUso->Checked;
+	this->lb_novoCustoDeUso->Enabled = this->cb_alterarCustoDeUso->Checked;
 }
 private: System::Void TelaAlterarEquipamento_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_finalizar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

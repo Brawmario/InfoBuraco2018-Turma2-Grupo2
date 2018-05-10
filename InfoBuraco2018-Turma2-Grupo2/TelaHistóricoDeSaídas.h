@@ -37,7 +37,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::Button^  bt_aplicarFiltros;
 	protected:
 	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  bt_voltar;
+
 	private: System::Windows::Forms::Label^  lb_até;
 	private: System::Windows::Forms::Label^  lb_de;
 	private: System::Windows::Forms::MaskedTextBox^  mtb_dataFinal;
@@ -63,7 +64,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		{
 			this->bt_aplicarFiltros = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->bt_voltar = (gcnew System::Windows::Forms::Button());
 			this->lb_até = (gcnew System::Windows::Forms::Label());
 			this->lb_de = (gcnew System::Windows::Forms::Label());
 			this->mtb_dataFinal = (gcnew System::Windows::Forms::MaskedTextBox());
@@ -89,14 +90,15 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->button2->Text = L"Placeholder até aprendermos a mexer com database";
 			this->button2->UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// bt_voltar
 			// 
-			this->button1->Location = System::Drawing::Point(3, 33);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(61, 19);
-			this->button1->TabIndex = 11;
-			this->button1->Text = L"Voltar";
-			this->button1->UseVisualStyleBackColor = true;
+			this->bt_voltar->Location = System::Drawing::Point(3, 33);
+			this->bt_voltar->Name = L"bt_voltar";
+			this->bt_voltar->Size = System::Drawing::Size(61, 19);
+			this->bt_voltar->TabIndex = 11;
+			this->bt_voltar->Text = L"Voltar";
+			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaHistóricoDeSaídas::bt_voltar_Click);
 			// 
 			// lb_até
 			// 
@@ -153,7 +155,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb_históricoDeSaídas);
 			this->Controls->Add(this->bt_aplicarFiltros);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->bt_voltar);
 			this->Controls->Add(this->lb_até);
 			this->Controls->Add(this->lb_de);
 			this->Controls->Add(this->mtb_dataFinal);
@@ -165,5 +167,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void bt_voltar_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
+	}
+};
 }
