@@ -1,4 +1,8 @@
 #pragma once
+#include <iostream>
+#include "TelaAlterarSenha.h"
+#include "TelaAlterarUsername.h"
+#include "TelaListaOSGestor.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -116,6 +120,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_manipulaçãoPrioridadeOS->TabIndex = 2;
 			this->bt_manipulaçãoPrioridadeOS->Text = L"Manipulação de prioridade de OS";
 			this->bt_manipulaçãoPrioridadeOS->UseVisualStyleBackColor = false;
+			this->bt_manipulaçãoPrioridadeOS->Click += gcnew System::EventHandler(this, &MenuGestor::bt_manipulaçãoPrioridadeOS_Click);
 			// 
 			// ts_usuário
 			// 
@@ -148,18 +153,21 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->tsmi_alterarUsername->Name = L"tsmi_alterarUsername";
 			this->tsmi_alterarUsername->Size = System::Drawing::Size(180, 22);
 			this->tsmi_alterarUsername->Text = L"Alterar username";
+			this->tsmi_alterarUsername->Click += gcnew System::EventHandler(this, &MenuGestor::tsmi_alterarUsername_Click);
 			// 
 			// tsmi_alterarSenha
 			// 
 			this->tsmi_alterarSenha->Name = L"tsmi_alterarSenha";
 			this->tsmi_alterarSenha->Size = System::Drawing::Size(180, 22);
 			this->tsmi_alterarSenha->Text = L"Alterar senha";
+			this->tsmi_alterarSenha->Click += gcnew System::EventHandler(this, &MenuGestor::tsmi_alterarSenha_Click);
 			// 
 			// tsmi_signOut
 			// 
 			this->tsmi_signOut->Name = L"tsmi_signOut";
 			this->tsmi_signOut->Size = System::Drawing::Size(180, 22);
 			this->tsmi_signOut->Text = L"Sign Out";
+			this->tsmi_signOut->Click += gcnew System::EventHandler(this, &MenuGestor::tsmi_signOut_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -216,6 +224,21 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Void toolStripButton1_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void tsbt_informaçõesDoUsuário_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void tsmi_alterarUsername_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarUsername^ MudarUsername = gcnew TelaAlterarUsername();
+	MudarUsername->ShowDialog();
+}
+private: System::Void tsmi_alterarSenha_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarSenha^ MudarSenha = gcnew TelaAlterarSenha();
+	MudarSenha->ShowDialog();
+}
+private: System::Void bt_manipulaçãoPrioridadeOS_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaListaOSGestor^ ListaOS = gcnew TelaListaOSGestor();
+	ListaOS->ShowDialog();
+}
+private: System::Void tsmi_signOut_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

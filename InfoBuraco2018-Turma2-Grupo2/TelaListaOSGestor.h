@@ -118,6 +118,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt1_listaosgestor->TabIndex = 1;
 			this->bt1_listaosgestor->Text = L"Voltar";
 			this->bt1_listaosgestor->UseVisualStyleBackColor = true;
+			this->bt1_listaosgestor->Click += gcnew System::EventHandler(this, &TelaListaOSGestor::bt1_listaosgestor_Click);
 			// 
 			// lb1_listaosgestor
 			// 
@@ -267,6 +268,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt2_listaosgestor->TabIndex = 18;
 			this->bt2_listaosgestor->Text = L"Alterar";
 			this->bt2_listaosgestor->UseVisualStyleBackColor = true;
+			this->bt2_listaosgestor->Click += gcnew System::EventHandler(this, &TelaListaOSGestor::bt2_listaosgestor_Click);
 			// 
 			// TelaListaOSGestor
 			// 
@@ -321,5 +323,11 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->cb_listaosgestor->Enabled = false;
 		}
 	}
+private: System::Void bt1_listaosgestor_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt2_listaosgestor_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
 };
 }
