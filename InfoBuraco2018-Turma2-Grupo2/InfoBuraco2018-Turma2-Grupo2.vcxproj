@@ -135,6 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EmitirRelatorio.cpp" />
     <ClCompile Include="FormulacaoDePlanoDeSaida.cpp" />
     <ClCompile Include="ListaDeBuracos.cpp" />
     <ClCompile Include="TelaCriarBuraco.cpp" />
@@ -143,6 +144,9 @@
     <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EmitirRelatorio.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormulacaoDePlanoDeSaida.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -163,6 +167,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EmitirRelatorio.resx">
+      <DependentUpon>EmitirRelatorio.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormulacaoDePlanoDeSaida.resx">
       <DependentUpon>FormulacaoDePlanoDeSaida.h</DependentUpon>
     </EmbeddedResource>
