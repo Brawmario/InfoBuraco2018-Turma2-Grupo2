@@ -1,224 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="TelaCriarBuraco.cpp" />
+    <ClCompile Include="TelaListaOS.cpp" />
+    <ClCompile Include="TelaListaOSGestor.cpp" />
+    <ClCompile Include="TelaLogin.cpp" />
+    <ClCompile Include="TelaRealizacaoOS.cpp" />
+    <ClCompile Include="TelaAdicionarNovoMaterial.cpp" />
+    <ClCompile Include="MenuAcessoriaDeComunicação.cpp" />
+    <ClCompile Include="MenuDespachador.cpp" />
+    <ClCompile Include="MenuEncarregadoDaObra.cpp" />
+    <ClCompile Include="MenuGestor.cpp" />
+    <ClCompile Include="TelaAdicionarNovaEquipe.cpp" />
+    <ClCompile Include="TelaAdicionarNovoEquipamento.cpp" />
+    <ClCompile Include="TelaAlterarEquipamento.cpp" />
+    <ClCompile Include="TelaAlterarEquipe.cpp" />
+    <ClCompile Include="TelaAlterarMaterial.cpp" />
+    <ClCompile Include="TelaAlterarSenha.cpp" />
+    <ClCompile Include="TelaAlterarUsername.cpp" />
+    <ClCompile Include="TelaInfraestrutura.cpp" />
+    <ClCompile Include="TelaHistóricoDePagamentos.cpp" />
+    <ClCompile Include="TelaHistóricoDeSaídas.cpp" />
+    <ClCompile Include="TelaEmitirRelatorio.cpp" />
+    <ClCompile Include="TelaFormulacaoDePlanoDeSaida.cpp" />
+    <ClCompile Include="TelaListaDeBuracos.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TelaCriarBuraco.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaListaOS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaLogin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaRealizacaoOS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuDespachador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuEncarregadoDaObra.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuAcessoriaDeComunicação.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAlterarUsername.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAlterarSenha.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaHistóricoDePagamentos.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaHistóricoDeSaídas.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuGestor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaInfraestrutura.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAdicionarNovoEquipamento.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAdicionarNovaEquipe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAdicionarNovoMaterial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAlterarEquipamento.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAlterarEquipe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaAlterarMaterial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TelaListaOSGestor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaDeBuracos.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FormulacaoDePlanoDeSaida.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EmitirRelatorio.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="TelaCriarBuraco.h" />
+    <ClInclude Include="TelaListaOS.h" />
+    <ClInclude Include="TelaListaOSGestor.h" />
+    <ClInclude Include="TelaLogin.h" />
+    <ClInclude Include="TelaRealizacaoOS.h" />
+    <ClInclude Include="TelaAdicionarNovoMaterial.h" />
+    <ClInclude Include="MenuAcessoriaDeComunicação.h" />
+    <ClInclude Include="MenuDespachador.h" />
+    <ClInclude Include="MenuEncarregadoDaObra.h" />
+    <ClInclude Include="MenuGestor.h" />
+    <ClInclude Include="TelaAdicionarNovaEquipe.h" />
+    <ClInclude Include="TelaAdicionarNovoEquipamento.h" />
+    <ClInclude Include="TelaAlterarEquipamento.h" />
+    <ClInclude Include="TelaAlterarEquipe.h" />
+    <ClInclude Include="TelaAlterarMaterial.h" />
+    <ClInclude Include="TelaAlterarSenha.h" />
+    <ClInclude Include="TelaAlterarUsername.h" />
+    <ClInclude Include="TelaInfraestrutura.h" />
+    <ClInclude Include="TelaHistóricoDePagamentos.h" />
+    <ClInclude Include="TelaHistóricoDeSaídas.h" />
+    <ClInclude Include="TelaEmitirRelatorio.h" />
+    <ClInclude Include="TelaFormulacaoDePlanoDeSaida.h" />
+    <ClInclude Include="TelaListaDeBuracos.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TelaCriarBuraco.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaListaOS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaLogin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaRealizacaoOS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuGestor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuDespachador.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuEncarregadoDaObra.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuAcessoriaDeComunicação.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAlterarUsername.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAlterarSenha.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaHistóricoDePagamentos.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaHistóricoDeSaídas.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaInfraestrutura.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAdicionarNovoEquipamento.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAdicionarNovaEquipe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAdicionarNovoMaterial.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAlterarEquipamento.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAlterarEquipe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaAlterarMaterial.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TelaListaOSGestor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ListaDeBuracos.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FormulacaoDePlanoDeSaida.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EmitirRelatorio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TelaCriarBuraco.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaListaOS.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaLogin.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaRealizacaoOS.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuGestor.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuDespachador.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuEncarregadoDaObra.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuAcessoriaDeComunicação.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAlterarUsername.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAlterarSenha.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaHistóricoDePagamentos.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaHistóricoDeSaídas.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaInfraestrutura.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAdicionarNovoEquipamento.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAdicionarNovaEquipe.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAdicionarNovoMaterial.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAlterarEquipamento.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAlterarEquipe.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAlterarMaterial.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormulacaoDePlanoDeSaida.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeBuracos.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCriarBuraco.resx" />
+    <EmbeddedResource Include="TelaListaOS.resx" />
+    <EmbeddedResource Include="TelaListaOSGestor.resx" />
+    <EmbeddedResource Include="TelaRealizacaoOS.resx" />
+    <EmbeddedResource Include="TelaLogin.resx" />
+    <EmbeddedResource Include="MenuAcessoriaDeComunicação.resx" />
+    <EmbeddedResource Include="MenuDespachador.resx" />
+    <EmbeddedResource Include="MenuEncarregadoDaObra.resx" />
+    <EmbeddedResource Include="MenuGestor.resx" />
+    <EmbeddedResource Include="TelaAdicionarNovaEquipe.resx" />
+    <EmbeddedResource Include="TelaAdicionarNovoEquipamento.resx" />
+    <EmbeddedResource Include="TelaAdicionarNovoMaterial.resx" />
+    <EmbeddedResource Include="TelaAlterarEquipamento.resx" />
+    <EmbeddedResource Include="TelaAlterarEquipe.resx" />
+    <EmbeddedResource Include="TelaAlterarMaterial.resx" />
+    <EmbeddedResource Include="TelaAlterarSenha.resx" />
+    <EmbeddedResource Include="TelaAlterarUsername.resx" />
+    <EmbeddedResource Include="TelaInfraestrutura.resx" />
+    <EmbeddedResource Include="TelaHistóricoDePagamentos.resx" />
+    <EmbeddedResource Include="TelaHistóricoDeSaídas.resx" />
+    <EmbeddedResource Include="TelaEmitirRelatorio.resx" />
+    <EmbeddedResource Include="TelaFormulacaoDePlanoDeSaida.resx" />
+    <EmbeddedResource Include="TelaListaDeBuracos.resx" />
   </ItemGroup>
 </Project>

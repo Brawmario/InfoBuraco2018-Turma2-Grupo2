@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Sumário para EmitirRelatorio
 	/// </summary>
-	public ref class EmitirRelatorio : public System::Windows::Forms::Form
+	public ref class TelaEmitirRelatorio : public System::Windows::Forms::Form
 	{
 	public:
-		EmitirRelatorio(void)
+		TelaEmitirRelatorio(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Limpar os recursos que estão sendo usados.
 		/// </summary>
-		~EmitirRelatorio()
+		~TelaEmitirRelatorio()
 		{
 			if (components)
 			{
@@ -109,7 +109,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 21);
 			this->comboBox1->TabIndex = 4;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &EmitirRelatorio::comboBox1_SelectedIndexChanged);
+			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox1_SelectedIndexChanged);
 			// 
 			// comboBox2
 			// 
@@ -118,7 +118,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(121, 21);
 			this->comboBox2->TabIndex = 5;
-			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &EmitirRelatorio::comboBox2_SelectedIndexChanged);
+			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox2_SelectedIndexChanged);
 			// 
 			// label3
 			// 

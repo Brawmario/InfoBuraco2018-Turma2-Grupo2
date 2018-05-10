@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Sumário para FormulacaoDePlanoDeSaida
 	/// </summary>
-	public ref class FormulacaoDePlanoDeSaida : public System::Windows::Forms::Form
+	public ref class TelaFormulacaoDePlanoDeSaida : public System::Windows::Forms::Form
 	{
 	public:
-		FormulacaoDePlanoDeSaida(void)
+		TelaFormulacaoDePlanoDeSaida(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Limpar os recursos que estão sendo usados.
 		/// </summary>
-		~FormulacaoDePlanoDeSaida()
+		~TelaFormulacaoDePlanoDeSaida()
 		{
 			if (components)
 			{
@@ -151,7 +151,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->label4->Size = System::Drawing::Size(92, 13);
 			this->label4->TabIndex = 7;
 			this->label4->Text = L"Equipamentos OS";
-			this->label4->Click += gcnew System::EventHandler(this, &FormulacaoDePlanoDeSaida::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &TelaFormulacaoDePlanoDeSaida::label4_Click);
 			// 
 			// listBox2
 			// 

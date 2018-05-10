@@ -140,9 +140,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EmitirRelatorio.cpp" />
-    <ClCompile Include="FormulacaoDePlanoDeSaida.cpp" />
-    <ClCompile Include="ListaDeBuracos.cpp" />
+    <ClCompile Include="TelaEmitirRelatorio.cpp" />
+    <ClCompile Include="TelaFormulacaoDePlanoDeSaida.cpp" />
+    <ClCompile Include="TelaListaDeBuracos.cpp" />
     <ClCompile Include="TelaCriarBuraco.cpp" />
     <ClCompile Include="TelaListaOS.cpp" />
     <ClCompile Include="TelaListaOSGestor.cpp" />
@@ -150,13 +150,13 @@
     <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EmitirRelatorio.h">
+    <ClInclude Include="TelaEmitirRelatorio.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FormulacaoDePlanoDeSaida.h">
+    <ClInclude Include="TelaFormulacaoDePlanoDeSaida.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ListaDeBuracos.h">
+    <ClInclude Include="TelaListaDeBuracos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaCriarBuraco.h">
@@ -176,14 +176,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EmitirRelatorio.resx">
-      <DependentUpon>EmitirRelatorio.h</DependentUpon>
+    <EmbeddedResource Include="TelaEmitirRelatorio.resx">
+      <DependentUpon>TelaEmitirRelatorio.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulacaoDePlanoDeSaida.resx">
-      <DependentUpon>FormulacaoDePlanoDeSaida.h</DependentUpon>
+    <EmbeddedResource Include="TelaFormulacaoDePlanoDeSaida.resx">
+      <DependentUpon>TelaFormulacaoDePlanoDeSaida.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeBuracos.resx">
-      <DependentUpon>ListaDeBuracos.h</DependentUpon>
+    <EmbeddedResource Include="TelaListaDeBuracos.resx">
+      <DependentUpon>TelaListaDeBuracos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCriarBuraco.resx">
       <DependentUpon>TelaCriarBuraco.h</DependentUpon>

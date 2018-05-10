@@ -12,10 +12,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	/// <summary>
 	/// Sumário para ListaDeBuracos
 	/// </summary>
-	public ref class ListaDeBuracos : public System::Windows::Forms::Form
+	public ref class TelaListaDeBuracos : public System::Windows::Forms::Form
 	{
 	public:
-		ListaDeBuracos(void)
+		TelaListaDeBuracos(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// <summary>
 		/// Limpar os recursos que estão sendo usados.
 		/// </summary>
-		~ListaDeBuracos()
+		~TelaListaDeBuracos()
 		{
 			if (components)
 			{
@@ -92,7 +92,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Voltar";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &ListaDeBuracos::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &TelaListaDeBuracos::button1_Click);
 			// 
 			// listBox1
 			// 
@@ -102,7 +102,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(186, 303);
 			this->listBox1->TabIndex = 1;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &ListaDeBuracos::listBox1_SelectedIndexChanged);
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaListaDeBuracos::listBox1_SelectedIndexChanged);
 			// 
 			// label1
 			// 
