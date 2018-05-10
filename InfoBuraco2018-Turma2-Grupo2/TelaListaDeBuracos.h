@@ -34,22 +34,43 @@ namespace InfoBuraco2018Turma2Grupo2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::ListBox^  listBox1;
-	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Label^  label4;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Button^  bt_voltar;
+	private: System::Windows::Forms::ListBox^  lib_listaDeBuracos;
+
+
+	private: System::Windows::Forms::Label^  lb_númeroDeID;
+	protected:
+
+
+
+	private: System::Windows::Forms::Label^  lb_localização;
+
+	private: System::Windows::Forms::Label^  lb_tamanho;
+
+	private: System::Windows::Forms::Label^  lb_posiçãoRelativa;
+
+	private: System::Windows::Forms::Label^  lb_regional;
+	private: System::Windows::Forms::Label^  informaçõesReferentesAoBuraco;
+
+
+	private: System::Windows::Forms::PictureBox^  pb_fotos;
+
 	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::Label^  label8;
-	private: System::Windows::Forms::ListBox^  listBox2;
-	private: System::Windows::Forms::Label^  label10;
-	private: System::Windows::Forms::Label^  label11;
-	private: System::Windows::Forms::Label^  label12;
-	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::Label^  lb_listaDeReclamações;
+
+	private: System::Windows::Forms::ListBox^  lib_listaDeReclamações;
+
+
+
+	private: System::Windows::Forms::Label^  lb_contato;
+
+
+	private: System::Windows::Forms::Label^  lb_horário;
+
+	private: System::Windows::Forms::Label^  lb_data;
+
+	private: System::Windows::Forms::Label^  lb_nome;
+
 	protected:
 
 	private:
@@ -65,106 +86,107 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->bt_voltar = (gcnew System::Windows::Forms::Button());
+			this->lib_listaDeBuracos = (gcnew System::Windows::Forms::ListBox());
+			this->lb_númeroDeID = (gcnew System::Windows::Forms::Label());
+			this->lb_localização = (gcnew System::Windows::Forms::Label());
+			this->lb_tamanho = (gcnew System::Windows::Forms::Label());
+			this->lb_posiçãoRelativa = (gcnew System::Windows::Forms::Label());
+			this->lb_regional = (gcnew System::Windows::Forms::Label());
+			this->informaçõesReferentesAoBuraco = (gcnew System::Windows::Forms::Label());
+			this->pb_fotos = (gcnew System::Windows::Forms::PictureBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->lb_listaDeReclamações = (gcnew System::Windows::Forms::Label());
+			this->lib_listaDeReclamações = (gcnew System::Windows::Forms::ListBox());
+			this->lb_contato = (gcnew System::Windows::Forms::Label());
+			this->lb_horário = (gcnew System::Windows::Forms::Label());
+			this->lb_data = (gcnew System::Windows::Forms::Label());
+			this->lb_nome = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_fotos))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// button1
+			// bt_voltar
 			// 
-			this->button1->Location = System::Drawing::Point(69, 32);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Voltar";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &TelaListaDeBuracos::button1_Click);
+			this->bt_voltar->Location = System::Drawing::Point(69, 32);
+			this->bt_voltar->Name = L"bt_voltar";
+			this->bt_voltar->Size = System::Drawing::Size(75, 23);
+			this->bt_voltar->TabIndex = 0;
+			this->bt_voltar->Text = L"Voltar";
+			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaListaDeBuracos::button1_Click);
 			// 
-			// listBox1
+			// lib_listaDeBuracos
 			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Buraco1", L"Buraco2" });
-			this->listBox1->Location = System::Drawing::Point(12, 80);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(186, 303);
-			this->listBox1->TabIndex = 1;
-			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaListaDeBuracos::listBox1_SelectedIndexChanged);
+			this->lib_listaDeBuracos->FormattingEnabled = true;
+			this->lib_listaDeBuracos->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Buraco1", L"Buraco2" });
+			this->lib_listaDeBuracos->Location = System::Drawing::Point(12, 80);
+			this->lib_listaDeBuracos->Name = L"lib_listaDeBuracos";
+			this->lib_listaDeBuracos->Size = System::Drawing::Size(186, 303);
+			this->lib_listaDeBuracos->TabIndex = 1;
+			this->lib_listaDeBuracos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaListaDeBuracos::listBox1_SelectedIndexChanged);
 			// 
-			// label1
+			// lb_númeroDeID
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(240, 82);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(76, 13);
-			this->label1->TabIndex = 2;
-			this->label1->Text = L"Número de ID:";
+			this->lb_númeroDeID->AutoSize = true;
+			this->lb_númeroDeID->Location = System::Drawing::Point(240, 82);
+			this->lb_númeroDeID->Name = L"lb_númeroDeID";
+			this->lb_númeroDeID->Size = System::Drawing::Size(76, 13);
+			this->lb_númeroDeID->TabIndex = 2;
+			this->lb_númeroDeID->Text = L"Número de ID:";
 			// 
-			// label2
+			// lb_localização
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(240, 105);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(67, 13);
-			this->label2->TabIndex = 3;
-			this->label2->Text = L"Localização:";
+			this->lb_localização->AutoSize = true;
+			this->lb_localização->Location = System::Drawing::Point(240, 105);
+			this->lb_localização->Name = L"lb_localização";
+			this->lb_localização->Size = System::Drawing::Size(67, 13);
+			this->lb_localização->TabIndex = 3;
+			this->lb_localização->Text = L"Localização:";
 			// 
-			// label3
+			// lb_tamanho
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(240, 130);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(55, 13);
-			this->label3->TabIndex = 4;
-			this->label3->Text = L"Tamanho:";
+			this->lb_tamanho->AutoSize = true;
+			this->lb_tamanho->Location = System::Drawing::Point(240, 130);
+			this->lb_tamanho->Name = L"lb_tamanho";
+			this->lb_tamanho->Size = System::Drawing::Size(55, 13);
+			this->lb_tamanho->TabIndex = 4;
+			this->lb_tamanho->Text = L"Tamanho:";
+			this->lb_tamanho->Click += gcnew System::EventHandler(this, &TelaListaDeBuracos::label3_Click);
 			// 
-			// label4
+			// lb_posiçãoRelativa
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(240, 156);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(90, 13);
-			this->label4->TabIndex = 5;
-			this->label4->Text = L"Posição Relativa:";
+			this->lb_posiçãoRelativa->AutoSize = true;
+			this->lb_posiçãoRelativa->Location = System::Drawing::Point(240, 156);
+			this->lb_posiçãoRelativa->Name = L"lb_posiçãoRelativa";
+			this->lb_posiçãoRelativa->Size = System::Drawing::Size(90, 13);
+			this->lb_posiçãoRelativa->TabIndex = 5;
+			this->lb_posiçãoRelativa->Text = L"Posição Relativa:";
 			// 
-			// label5
+			// lb_regional
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(240, 183);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(52, 13);
-			this->label5->TabIndex = 6;
-			this->label5->Text = L"Regional:";
+			this->lb_regional->AutoSize = true;
+			this->lb_regional->Location = System::Drawing::Point(240, 183);
+			this->lb_regional->Name = L"lb_regional";
+			this->lb_regional->Size = System::Drawing::Size(52, 13);
+			this->lb_regional->TabIndex = 6;
+			this->lb_regional->Text = L"Regional:";
 			// 
-			// label6
+			// informaçõesReferentesAoBuraco
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(332, 42);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(172, 13);
-			this->label6->TabIndex = 7;
-			this->label6->Text = L"Informações Referentes ao Buraco";
+			this->informaçõesReferentesAoBuraco->AutoSize = true;
+			this->informaçõesReferentesAoBuraco->Location = System::Drawing::Point(332, 42);
+			this->informaçõesReferentesAoBuraco->Name = L"informaçõesReferentesAoBuraco";
+			this->informaçõesReferentesAoBuraco->Size = System::Drawing::Size(172, 13);
+			this->informaçõesReferentesAoBuraco->TabIndex = 7;
+			this->informaçõesReferentesAoBuraco->Text = L"Informações Referentes ao Buraco";
 			// 
-			// pictureBox1
+			// pb_fotos
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(318, 239);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(152, 119);
-			this->pictureBox1->TabIndex = 8;
-			this->pictureBox1->TabStop = false;
+			this->pb_fotos->Location = System::Drawing::Point(318, 239);
+			this->pb_fotos->Name = L"pb_fotos";
+			this->pb_fotos->Size = System::Drawing::Size(152, 119);
+			this->pb_fotos->TabIndex = 8;
+			this->pb_fotos->TabStop = false;
 			// 
 			// label7
 			// 
@@ -175,92 +197,98 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->label7->TabIndex = 9;
 			this->label7->Text = L"Fotos";
 			// 
-			// label8
+			// lb_listaDeReclamações
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(605, 42);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(112, 13);
-			this->label8->TabIndex = 10;
-			this->label8->Text = L"Lista de Reclamações";
+			this->lb_listaDeReclamações->AutoSize = true;
+			this->lb_listaDeReclamações->Location = System::Drawing::Point(605, 42);
+			this->lb_listaDeReclamações->Name = L"lb_listaDeReclamações";
+			this->lb_listaDeReclamações->Size = System::Drawing::Size(112, 13);
+			this->lb_listaDeReclamações->TabIndex = 10;
+			this->lb_listaDeReclamações->Text = L"Lista de Reclamações";
 			// 
-			// listBox2
+			// lib_listaDeReclamações
 			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Reclamante1", L"Reclamante2" });
-			this->listBox2->Location = System::Drawing::Point(578, 79);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(177, 134);
-			this->listBox2->TabIndex = 11;
+			this->lib_listaDeReclamações->FormattingEnabled = true;
+			this->lib_listaDeReclamações->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Reclamante1", L"Reclamante2" });
+			this->lib_listaDeReclamações->Location = System::Drawing::Point(578, 79);
+			this->lib_listaDeReclamações->Name = L"lib_listaDeReclamações";
+			this->lib_listaDeReclamações->Size = System::Drawing::Size(177, 134);
+			this->lib_listaDeReclamações->TabIndex = 11;
 			// 
-			// label10
+			// lb_contato
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(562, 331);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(47, 13);
-			this->label10->TabIndex = 15;
-			this->label10->Text = L"Contato:";
+			this->lb_contato->AutoSize = true;
+			this->lb_contato->Location = System::Drawing::Point(562, 331);
+			this->lb_contato->Name = L"lb_contato";
+			this->lb_contato->Size = System::Drawing::Size(47, 13);
+			this->lb_contato->TabIndex = 15;
+			this->lb_contato->Text = L"Contato:";
+			this->lb_contato->Click += gcnew System::EventHandler(this, &TelaListaDeBuracos::label10_Click);
 			// 
-			// label11
+			// lb_horário
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(562, 305);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(44, 13);
-			this->label11->TabIndex = 14;
-			this->label11->Text = L"Horário:";
+			this->lb_horário->AutoSize = true;
+			this->lb_horário->Location = System::Drawing::Point(562, 305);
+			this->lb_horário->Name = L"lb_horário";
+			this->lb_horário->Size = System::Drawing::Size(44, 13);
+			this->lb_horário->TabIndex = 14;
+			this->lb_horário->Text = L"Horário:";
 			// 
-			// label12
+			// lb_data
 			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(562, 280);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(33, 13);
-			this->label12->TabIndex = 13;
-			this->label12->Text = L"Data:";
+			this->lb_data->AutoSize = true;
+			this->lb_data->Location = System::Drawing::Point(562, 280);
+			this->lb_data->Name = L"lb_data";
+			this->lb_data->Size = System::Drawing::Size(33, 13);
+			this->lb_data->TabIndex = 13;
+			this->lb_data->Text = L"Data:";
 			// 
-			// label13
+			// lb_nome
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(562, 257);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(38, 13);
-			this->label13->TabIndex = 12;
-			this->label13->Text = L"Nome:";
+			this->lb_nome->AutoSize = true;
+			this->lb_nome->Location = System::Drawing::Point(562, 257);
+			this->lb_nome->Name = L"lb_nome";
+			this->lb_nome->Size = System::Drawing::Size(38, 13);
+			this->lb_nome->TabIndex = 12;
+			this->lb_nome->Text = L"Nome:";
 			// 
-			// ListaDeBuracos
+			// TelaListaDeBuracos
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(793, 454);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label11);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->label13);
-			this->Controls->Add(this->listBox2);
-			this->Controls->Add(this->label8);
+			this->Controls->Add(this->lb_contato);
+			this->Controls->Add(this->lb_horário);
+			this->Controls->Add(this->lb_data);
+			this->Controls->Add(this->lb_nome);
+			this->Controls->Add(this->lib_listaDeReclamações);
+			this->Controls->Add(this->lb_listaDeReclamações);
 			this->Controls->Add(this->label7);
-			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->listBox1);
-			this->Controls->Add(this->button1);
-			this->Name = L"ListaDeBuracos";
+			this->Controls->Add(this->pb_fotos);
+			this->Controls->Add(this->informaçõesReferentesAoBuraco);
+			this->Controls->Add(this->lb_regional);
+			this->Controls->Add(this->lb_posiçãoRelativa);
+			this->Controls->Add(this->lb_tamanho);
+			this->Controls->Add(this->lb_localização);
+			this->Controls->Add(this->lb_númeroDeID);
+			this->Controls->Add(this->lib_listaDeBuracos);
+			this->Controls->Add(this->bt_voltar);
+			this->Name = L"TelaListaDeBuracos";
 			this->Text = L"ListaDeBuracos";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_fotos))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
 	}
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
-	};
+	private: System::Void label10_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+};
 }

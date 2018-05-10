@@ -34,13 +34,21 @@ namespace InfoBuraco2018Turma2Grupo2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::ComboBox^  comboBox2;
-	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Button^  bt_voltar;
+	private: System::Windows::Forms::Label^  lb_tipoDeRelatório;
+	private: System::Windows::Forms::Label^  lb_OS;
+	protected:
+
+
+
+	private: System::Windows::Forms::Button^  bt_gerar;
+	private: System::Windows::Forms::ComboBox^  cb_tipoDeRelatório;
+
+
+	private: System::Windows::Forms::ComboBox^  cb_OS;
+
+	private: System::Windows::Forms::Label^  lb_emissãoDeRelatório;
+
 	protected:
 
 	private:
@@ -56,92 +64,94 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->bt_voltar = (gcnew System::Windows::Forms::Button());
+			this->lb_tipoDeRelatório = (gcnew System::Windows::Forms::Label());
+			this->lb_OS = (gcnew System::Windows::Forms::Label());
+			this->bt_gerar = (gcnew System::Windows::Forms::Button());
+			this->cb_tipoDeRelatório = (gcnew System::Windows::Forms::ComboBox());
+			this->cb_OS = (gcnew System::Windows::Forms::ComboBox());
+			this->lb_emissãoDeRelatório = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// button1
+			// bt_voltar
 			// 
-			this->button1->Location = System::Drawing::Point(150, 149);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Voltar";
-			this->button1->UseVisualStyleBackColor = true;
+			this->bt_voltar->Location = System::Drawing::Point(150, 149);
+			this->bt_voltar->Name = L"bt_voltar";
+			this->bt_voltar->Size = System::Drawing::Size(75, 23);
+			this->bt_voltar->TabIndex = 0;
+			this->bt_voltar->Text = L"Voltar";
+			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaEmitirRelatorio::bt_voltar_Click);
 			// 
-			// label1
+			// lb_tipoDeRelatório
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(12, 52);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(91, 13);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Tipo de Relatório:";
+			this->lb_tipoDeRelatório->AutoSize = true;
+			this->lb_tipoDeRelatório->Location = System::Drawing::Point(12, 52);
+			this->lb_tipoDeRelatório->Name = L"lb_tipoDeRelatório";
+			this->lb_tipoDeRelatório->Size = System::Drawing::Size(91, 13);
+			this->lb_tipoDeRelatório->TabIndex = 1;
+			this->lb_tipoDeRelatório->Text = L"Tipo de Relatório:";
 			// 
-			// label2
+			// lb_OS
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(12, 99);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(25, 13);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"OS:";
+			this->lb_OS->AutoSize = true;
+			this->lb_OS->Location = System::Drawing::Point(12, 99);
+			this->lb_OS->Name = L"lb_OS";
+			this->lb_OS->Size = System::Drawing::Size(25, 13);
+			this->lb_OS->TabIndex = 2;
+			this->lb_OS->Text = L"OS:";
 			// 
-			// button2
+			// bt_gerar
 			// 
-			this->button2->Location = System::Drawing::Point(44, 149);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
-			this->button2->TabIndex = 3;
-			this->button2->Text = L"Gerar";
-			this->button2->UseVisualStyleBackColor = true;
+			this->bt_gerar->Location = System::Drawing::Point(44, 149);
+			this->bt_gerar->Name = L"bt_gerar";
+			this->bt_gerar->Size = System::Drawing::Size(75, 23);
+			this->bt_gerar->TabIndex = 3;
+			this->bt_gerar->Text = L"Gerar";
+			this->bt_gerar->UseVisualStyleBackColor = true;
+			this->bt_gerar->Click += gcnew System::EventHandler(this, &TelaEmitirRelatorio::button2_Click);
 			// 
-			// comboBox1
+			// cb_tipoDeRelatório
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Físico", L"Físico-Financeiro" });
-			this->comboBox1->Location = System::Drawing::Point(124, 49);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 21);
-			this->comboBox1->TabIndex = 4;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox1_SelectedIndexChanged);
+			this->cb_tipoDeRelatório->FormattingEnabled = true;
+			this->cb_tipoDeRelatório->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Físico", L"Físico-Financeiro" });
+			this->cb_tipoDeRelatório->Location = System::Drawing::Point(124, 49);
+			this->cb_tipoDeRelatório->Name = L"cb_tipoDeRelatório";
+			this->cb_tipoDeRelatório->Size = System::Drawing::Size(121, 21);
+			this->cb_tipoDeRelatório->TabIndex = 4;
+			this->cb_tipoDeRelatório->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox1_SelectedIndexChanged);
 			// 
-			// comboBox2
+			// cb_OS
 			// 
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(124, 96);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(121, 21);
-			this->comboBox2->TabIndex = 5;
-			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox2_SelectedIndexChanged);
+			this->cb_OS->FormattingEnabled = true;
+			this->cb_OS->Location = System::Drawing::Point(124, 96);
+			this->cb_OS->Name = L"cb_OS";
+			this->cb_OS->Size = System::Drawing::Size(121, 21);
+			this->cb_OS->TabIndex = 5;
+			this->cb_OS->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaEmitirRelatorio::comboBox2_SelectedIndexChanged);
 			// 
-			// label3
+			// lb_emissãoDeRelatório
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(79, 18);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(102, 13);
-			this->label3->TabIndex = 6;
-			this->label3->Text = L"Emição de Relatório";
+			this->lb_emissãoDeRelatório->AutoSize = true;
+			this->lb_emissãoDeRelatório->Location = System::Drawing::Point(79, 18);
+			this->lb_emissãoDeRelatório->Name = L"lb_emissãoDeRelatório";
+			this->lb_emissãoDeRelatório->Size = System::Drawing::Size(106, 13);
+			this->lb_emissãoDeRelatório->TabIndex = 6;
+			this->lb_emissãoDeRelatório->Text = L"Emissão de Relatório";
 			// 
-			// EmitirRelatorio
+			// TelaEmitirRelatorio
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(257, 197);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->comboBox2);
-			this->Controls->Add(this->comboBox1);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
-			this->Name = L"EmitirRelatorio";
+			this->Controls->Add(this->lb_emissãoDeRelatório);
+			this->Controls->Add(this->cb_OS);
+			this->Controls->Add(this->cb_tipoDeRelatório);
+			this->Controls->Add(this->bt_gerar);
+			this->Controls->Add(this->lb_OS);
+			this->Controls->Add(this->lb_tipoDeRelatório);
+			this->Controls->Add(this->bt_voltar);
+			this->Name = L"TelaEmitirRelatorio";
 			this->Text = L"EmitirRelatorio";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -152,5 +162,11 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	}
 private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_voltar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
 };
 }

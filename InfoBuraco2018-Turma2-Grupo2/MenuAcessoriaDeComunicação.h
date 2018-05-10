@@ -3,6 +3,7 @@
 #include "TelaAlterarSenha.h"
 #include "TelaAlterarUsername.h"
 #include "TelaCriarBuraco.h"
+#include "TelaListaDeBuracos.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -195,6 +196,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		}
 #pragma endregion
 	private: System::Void bt_listaDeBuracos_VerListaDeBuracos(System::Object^  sender, System::EventArgs^  e) {
+		TelaListaDeBuracos^ ListaDeBuracos = gcnew TelaListaDeBuracos();
+		ListaDeBuracos->ShowDialog();
 	}
 private: System::Void bt_registrarNovoBuraco_NovoBuraco(System::Object^  sender, System::EventArgs^  e) {
 	TelaCriarBuraco^ CriarBuraco = gcnew TelaCriarBuraco();

@@ -6,6 +6,10 @@
 #include "TelaListaOS.h"
 #include "TelaHistóricoDeSaídas.h"
 #include "TelaHistóricoDePagamentos.h"
+#include "TelaListaDeBuracos.h"
+#include "TelaFormulacaoDePlanoDeSaida.h"
+
+
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -114,6 +118,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_listaDeBuracos->TabIndex = 1;
 			this->bt_listaDeBuracos->Text = L"Lista de Buracos";
 			this->bt_listaDeBuracos->UseVisualStyleBackColor = true;
+			this->bt_listaDeBuracos->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_listaDeBuracos_Click);
 			// 
 			// bt_listaDeOS
 			// 
@@ -135,6 +140,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_formulaçãoDePlanoDeSaída->TabIndex = 3;
 			this->bt_formulaçãoDePlanoDeSaída->Text = L"Formulação de plano de saída";
 			this->bt_formulaçãoDePlanoDeSaída->UseVisualStyleBackColor = true;
+			this->bt_formulaçãoDePlanoDeSaída->Click += gcnew System::EventHandler(this, &MenuDespachador::bt_formulaçãoDePlanoDeSaída_Click);
 			// 
 			// bt_históricoDeSaídas
 			// 
@@ -282,6 +288,14 @@ private: System::Void bt_históricoDeSaídas_Click(System::Object^  sender, System
 private: System::Void bt_históricoDePagamentos_Click(System::Object^  sender, System::EventArgs^  e) {
 	TelaHistóricoDePagamentos^ HistóricoPagamentos = gcnew TelaHistóricoDePagamentos();
 	HistóricoPagamentos->ShowDialog();
+}
+private: System::Void bt_listaDeBuracos_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaListaDeBuracos^ ListaDeBuracos = gcnew TelaListaDeBuracos();
+	ListaDeBuracos->ShowDialog();
+}
+private: System::Void bt_formulaçãoDePlanoDeSaída_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaFormulacaoDePlanoDeSaida^ PlanoDeSaída = gcnew TelaFormulacaoDePlanoDeSaida();
+	PlanoDeSaída->ShowDialog();
 }
 };
 }

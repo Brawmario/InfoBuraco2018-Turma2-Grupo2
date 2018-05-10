@@ -3,6 +3,7 @@
 #include "TelaAlterarSenha.h"
 #include "TelaAlterarUsername.h"
 #include "TelaListaOSGestor.h"
+#include "TelaEmitirRelatorio.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -220,6 +221,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		TelaEmitirRelatorio^ EmitirRelatorio = gcnew TelaEmitirRelatorio();
+		EmitirRelatorio->ShowDialog();
 	}
 	private: System::Void toolStripButton1_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
