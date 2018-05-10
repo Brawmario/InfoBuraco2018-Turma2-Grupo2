@@ -135,12 +135,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FormulacaoDePlanoDeSaida.cpp" />
+    <ClCompile Include="ListaDeBuracos.cpp" />
     <ClCompile Include="TelaCriarBuraco.cpp" />
     <ClCompile Include="TelaListaOS.cpp" />
     <ClCompile Include="TelaLogin.cpp" />
     <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FormulacaoDePlanoDeSaida.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListaDeBuracos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="TelaCriarBuraco.h">
       <FileType>CppForm</FileType>
     </ClInclude>
