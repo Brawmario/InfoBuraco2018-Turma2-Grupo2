@@ -120,6 +120,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_confirmar->TabIndex = 5;
 			this->bt_confirmar->Text = L"Confirmar";
 			this->bt_confirmar->UseVisualStyleBackColor = true;
+			this->bt_confirmar->Click += gcnew System::EventHandler(this, &TelaAdicionarNovoEquipamento::bt_confirmar_Click);
 			// 
 			// lb_adicionarNovoEquipamento
 			// 
@@ -151,6 +152,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		}
 #pragma endregion
 	private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
 	}
+private: System::Void bt_confirmar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
 };
 }

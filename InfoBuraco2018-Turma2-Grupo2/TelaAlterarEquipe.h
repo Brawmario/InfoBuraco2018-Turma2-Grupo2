@@ -97,6 +97,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 17;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAlterarEquipe::bt_finalizar_Click);
 			// 
 			// bt_cancelar
 			// 
@@ -107,6 +108,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_cancelar->TabIndex = 16;
 			this->bt_cancelar->Text = L"Cancelar";
 			this->bt_cancelar->UseVisualStyleBackColor = true;
+			this->bt_cancelar->Click += gcnew System::EventHandler(this, &TelaAlterarEquipe::bt_cancelar_Click);
 			// 
 			// lb_alterarEquipe
 			// 
@@ -237,12 +239,21 @@ namespace InfoBuraco2018Turma2Grupo2 {
 
 private: System::Void cb_alterarNome_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	this->tb_novoNome->Enabled = this->cb_alterarNome->Checked;
+	this->lb_novoNome->Enabled = this->cb_alterarNome->Checked;
 }
 private: System::Void cb_alterarNumeroDeProfissionais_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	this->tb_novoNúmeroDeProfissionais->Enabled = this->cb_alterarNúmeroDeProfissionais->Checked;
+	this->lb_novoNúmeroDeProfissionais->Enabled = this->cb_alterarNúmeroDeProfissionais->Checked;
 }
 private: System::Void b_alterarCustoPorHora_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	this->tb_novoCustoPorHora->Enabled = this->cb_alterarCustoPorHora->Checked;
+	this->lb_novoCustoPorHora->Enabled = this->cb_alterarCustoPorHora->Checked;
+}
+private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_finalizar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

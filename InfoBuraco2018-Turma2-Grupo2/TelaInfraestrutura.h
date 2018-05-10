@@ -1,4 +1,11 @@
 #pragma once
+#include <iostream>
+#include "TelaAdicionarNovaEquipe.h"
+#include "TelaAdicionarNovoEquipamento.h"
+#include "TelaAdicionarNovoMaterial.h"
+#include "TelaAlterarEquipe.h"
+#include "TelaAlterarMaterial.h"
+#include "TelaAlterarEquipamento.h"
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -156,6 +163,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_alterarEquipamento->TabIndex = 10;
 			this->bt_alterarEquipamento->Text = L"Alterar equipamento";
 			this->bt_alterarEquipamento->UseVisualStyleBackColor = true;
+			this->bt_alterarEquipamento->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_alterarEquipamento_Click);
 			// 
 			// button11
 			// 
@@ -174,6 +182,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_adicionarNovoEquipamento->TabIndex = 8;
 			this->bt_adicionarNovoEquipamento->Text = L"Adicionar novo equipamento";
 			this->bt_adicionarNovoEquipamento->UseVisualStyleBackColor = true;
+			this->bt_adicionarNovoEquipamento->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_adicionarNovoEquipamento_Click);
 			// 
 			// tp_equipes
 			// 
@@ -206,6 +215,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_alterarEquipe->TabIndex = 10;
 			this->bt_alterarEquipe->Text = L"Alterar equipe";
 			this->bt_alterarEquipe->UseVisualStyleBackColor = true;
+			this->bt_alterarEquipe->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_alterarEquipe_Click);
 			// 
 			// button4
 			// 
@@ -224,6 +234,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_adicionarNovaEquipe->TabIndex = 8;
 			this->bt_adicionarNovaEquipe->Text = L"Adicionar nova equipe";
 			this->bt_adicionarNovaEquipe->UseVisualStyleBackColor = true;
+			this->bt_adicionarNovaEquipe->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_adicionarNovaEquipe_Click);
 			// 
 			// tp_materiais
 			// 
@@ -257,6 +268,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_alterarMaterial->TabIndex = 10;
 			this->bt_alterarMaterial->Text = L"Alterar material";
 			this->bt_alterarMaterial->UseVisualStyleBackColor = true;
+			this->bt_alterarMaterial->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_alterarMaterial_Click);
 			// 
 			// button8
 			// 
@@ -275,6 +287,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_adicionarNovoMaterial->TabIndex = 8;
 			this->bt_adicionarNovoMaterial->Text = L"Adicionar novo material";
 			this->bt_adicionarNovoMaterial->UseVisualStyleBackColor = true;
+			this->bt_adicionarNovoMaterial->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_adicionarNovoMaterial_Click);
 			// 
 			// bt_voltar
 			// 
@@ -284,6 +297,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_voltar->TabIndex = 1;
 			this->bt_voltar->Text = L"Voltar";
 			this->bt_voltar->UseVisualStyleBackColor = true;
+			this->bt_voltar->Click += gcnew System::EventHandler(this, &TelaInfraestrutura::bt_voltar_Click);
 			// 
 			// TelaInfraestrutura
 			// 
@@ -307,6 +321,33 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Void tp_materiais_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void TelaInfraestrutura_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void bt_voltar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_adicionarNovoEquipamento_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAdicionarNovoEquipamento^ NovoEquipamento = gcnew TelaAdicionarNovoEquipamento();
+	NovoEquipamento->ShowDialog();
+}
+private: System::Void bt_alterarEquipamento_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarEquipamento^ AlterarEquipamento = gcnew TelaAlterarEquipamento();
+	AlterarEquipamento->ShowDialog();
+}
+private: System::Void bt_adicionarNovaEquipe_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAdicionarNovaEquipe^ NovaEquipe = gcnew TelaAdicionarNovaEquipe();
+	NovaEquipe->ShowDialog();
+}
+private: System::Void bt_alterarEquipe_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarEquipe^ AlterarEquipe = gcnew TelaAlterarEquipe();
+	AlterarEquipe->ShowDialog();
+}
+private: System::Void bt_adicionarNovoMaterial_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAdicionarNovoMaterial^ NovoMaterial = gcnew TelaAdicionarNovoMaterial();
+	NovoMaterial->ShowDialog();
+}
+private: System::Void bt_alterarMaterial_Click(System::Object^  sender, System::EventArgs^  e) {
+	TelaAlterarMaterial^ AlterarMaterial = gcnew TelaAlterarMaterial();
+	AlterarMaterial->ShowDialog();
 }
 };
 }

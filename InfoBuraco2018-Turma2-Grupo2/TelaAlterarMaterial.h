@@ -120,6 +120,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_finalizar->TabIndex = 29;
 			this->bt_finalizar->Text = L"Finalizar";
 			this->bt_finalizar->UseVisualStyleBackColor = true;
+			this->bt_finalizar->Click += gcnew System::EventHandler(this, &TelaAlterarMaterial::bt_finalizar_Click);
 			// 
 			// bt_cancelar
 			// 
@@ -130,6 +131,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_cancelar->TabIndex = 28;
 			this->bt_cancelar->Text = L"Cancelar";
 			this->bt_cancelar->UseVisualStyleBackColor = true;
+			this->bt_cancelar->Click += gcnew System::EventHandler(this, &TelaAlterarMaterial::bt_cancelar_Click);
 			// 
 			// lb_alterarMaterial
 			// 
@@ -220,6 +222,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->cb_alterarNome);
 			this->Name = L"TelaAlterarMaterial";
 			this->Text = L"TelaAlterarMaterial";
+			this->Load += gcnew System::EventHandler(this, &TelaAlterarMaterial::TelaAlterarMaterial_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -227,12 +230,24 @@ namespace InfoBuraco2018Turma2Grupo2 {
 #pragma endregion
 	private: System::Void cb_alterarNome_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		this->tb_novoNome->Enabled = this->cb_alterarNome->Checked;
+		this->lb_novoNome->Enabled = this->cb_alterarNome->Checked;
+
 	}
 	private: System::Void cb_alterarCustoPorUnidade_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		this->tb_novoCustoPorUnidade->Enabled = this->cb_alterarCustoPorUnidade->Checked;
+		this->lb_novoCustoPorUnidade->Enabled = this->cb_alterarCustoPorUnidade->Checked;
 	}
 	private: System::Void cb_alterarUnidade_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		this->tb_novaUnidade->Enabled = this->cb_alterarUnidade->Checked;
+		this->lb_novaUnidade->Enabled = this->cb_alterarUnidade->Checked;
+}
+private: System::Void bt_cancelar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void bt_finalizar_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void TelaAlterarMaterial_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

@@ -85,13 +85,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb14_listaos = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// listBox1
+			// lbox_listaos
 			// 
 			this->lbox_listaos->FormattingEnabled = true;
 			this->lbox_listaos->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
-				L"OS0", L"OS1", L"OS2", L"OS3", L"OS4", L"OS5", L"OS6",
-					L"OS7", L"OS8", L"OS9", L"OS10", L"OS11", L"OS12", L"OS13", L"OS14", L"OS15", L"OS16", L"OS17", L"OS18", L"OS19", L"OS20", L"OS21",
-					L"OS22", L"OS23", L"OS24"
+				L"OS0", L"OS1", L"OS2", L"OS3", L"OS4", L"OS5",
+					L"OS6", L"OS7", L"OS8", L"OS9", L"OS10", L"OS11", L"OS12", L"OS13", L"OS14", L"OS15", L"OS16", L"OS17", L"OS18", L"OS19", L"OS20",
+					L"OS21", L"OS22", L"OS23", L"OS24"
 			});
 			this->lbox_listaos->Location = System::Drawing::Point(12, 43);
 			this->lbox_listaos->Name = L"lbox_listaos";
@@ -99,7 +99,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lbox_listaos->TabIndex = 0;
 			this->lbox_listaos->SelectedIndexChanged += gcnew System::EventHandler(this, &TelaListaOS::listBox1_SelectedIndexChanged);
 			// 
-			// button1
+			// bt_listaos
 			// 
 			this->bt_listaos->Location = System::Drawing::Point(22, 12);
 			this->bt_listaos->Name = L"bt_listaos";
@@ -107,8 +107,9 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt_listaos->TabIndex = 1;
 			this->bt_listaos->Text = L"Voltar";
 			this->bt_listaos->UseVisualStyleBackColor = true;
+			this->bt_listaos->Click += gcnew System::EventHandler(this, &TelaListaOS::bt_listaos_Click);
 			// 
-			// label1
+			// lb1_listaos
 			// 
 			this->lb1_listaos->AutoSize = true;
 			this->lb1_listaos->Location = System::Drawing::Point(164, 43);
@@ -117,7 +118,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb1_listaos->TabIndex = 2;
 			this->lb1_listaos->Text = L"Número da OS:";
 			// 
-			// label2
+			// lb2_listaos
 			// 
 			this->lb2_listaos->AutoSize = true;
 			this->lb2_listaos->Location = System::Drawing::Point(164, 83);
@@ -126,7 +127,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb2_listaos->TabIndex = 3;
 			this->lb2_listaos->Text = L"Prioridade de Atendimento:";
 			// 
-			// label3
+			// lb3_listaos
 			// 
 			this->lb3_listaos->AutoSize = true;
 			this->lb3_listaos->Location = System::Drawing::Point(164, 123);
@@ -135,7 +136,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb3_listaos->TabIndex = 4;
 			this->lb3_listaos->Text = L"Estimativa de Pessoal:";
 			// 
-			// label4
+			// lb4_listaos
 			// 
 			this->lb4_listaos->AutoSize = true;
 			this->lb4_listaos->Location = System::Drawing::Point(164, 163);
@@ -144,7 +145,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb4_listaos->TabIndex = 5;
 			this->lb4_listaos->Text = L"Estimativa de Equipamento:";
 			// 
-			// label5
+			// lb5_listaos
 			// 
 			this->lb5_listaos->AutoSize = true;
 			this->lb5_listaos->Location = System::Drawing::Point(164, 203);
@@ -153,7 +154,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb5_listaos->TabIndex = 6;
 			this->lb5_listaos->Text = L"Estimativa de Material:";
 			// 
-			// label6
+			// lb6_listaos
 			// 
 			this->lb6_listaos->AutoSize = true;
 			this->lb6_listaos->Location = System::Drawing::Point(164, 239);
@@ -162,7 +163,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb6_listaos->TabIndex = 7;
 			this->lb6_listaos->Text = L"Custo Estimado do Conserto:\r\n";
 			// 
-			// label7
+			// lb7_listaos
 			// 
 			this->lb7_listaos->AutoSize = true;
 			this->lb7_listaos->Location = System::Drawing::Point(164, 278);
@@ -171,7 +172,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb7_listaos->TabIndex = 8;
 			this->lb7_listaos->Text = L"Status:";
 			// 
-			// label8
+			// lb8_listaos
 			// 
 			this->lb8_listaos->AutoSize = true;
 			this->lb8_listaos->Location = System::Drawing::Point(347, 43);
@@ -179,55 +180,55 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->lb8_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb8_listaos->TabIndex = 9;
 			// 
-			// label9
+			// lb9_listaos
 			// 
 			this->lb9_listaos->AutoSize = true;
 			this->lb9_listaos->Location = System::Drawing::Point(347, 83);
 			this->lb9_listaos->Name = L"lb9_listaos";
-			this->lb9_listaos->Size = System::Drawing::Size(35, 13);
+			this->lb9_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb9_listaos->TabIndex = 10;
 			// 
-			// label10
+			// lb10_listaos
 			// 
 			this->lb10_listaos->AutoSize = true;
 			this->lb10_listaos->Location = System::Drawing::Point(347, 123);
 			this->lb10_listaos->Name = L"lb10_listaos";
-			this->lb10_listaos->Size = System::Drawing::Size(41, 13);
+			this->lb10_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb10_listaos->TabIndex = 11;
 			// 
-			// label11
+			// lb11_listaos
 			// 
 			this->lb11_listaos->AutoSize = true;
 			this->lb11_listaos->Location = System::Drawing::Point(347, 163);
 			this->lb11_listaos->Name = L"lb11_listaos";
-			this->lb11_listaos->Size = System::Drawing::Size(41, 13);
+			this->lb11_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb11_listaos->TabIndex = 12;
 			// 
-			// label12
+			// lb12_listaos
 			// 
 			this->lb12_listaos->AutoSize = true;
 			this->lb12_listaos->Location = System::Drawing::Point(347, 203);
 			this->lb12_listaos->Name = L"lb12_listaos";
-			this->lb12_listaos->Size = System::Drawing::Size(41, 13);
+			this->lb12_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb12_listaos->TabIndex = 13;
 			// 
-			// label13
+			// lb13_listaos
 			// 
 			this->lb13_listaos->AutoSize = true;
 			this->lb13_listaos->Location = System::Drawing::Point(347, 239);
 			this->lb13_listaos->Name = L"lb13_listaos";
-			this->lb13_listaos->Size = System::Drawing::Size(41, 13);
+			this->lb13_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb13_listaos->TabIndex = 14;
 			// 
-			// label14
+			// lb14_listaos
 			// 
 			this->lb14_listaos->AutoSize = true;
 			this->lb14_listaos->Location = System::Drawing::Point(347, 278);
 			this->lb14_listaos->Name = L"lb14_listaos";
-			this->lb14_listaos->Size = System::Drawing::Size(41, 13);
+			this->lb14_listaos->Size = System::Drawing::Size(0, 13);
 			this->lb14_listaos->TabIndex = 15;
 			// 
-			// ListaOS
+			// TelaListaOS
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -248,7 +249,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->Controls->Add(this->lb1_listaos);
 			this->Controls->Add(this->bt_listaos);
 			this->Controls->Add(this->lbox_listaos);
-			this->Name = L"ListaOS";
+			this->Name = L"TelaListaOS";
 			this->Text = L"ListaOS";
 			this->Load += gcnew System::EventHandler(this, &TelaListaOS::ListaOS_Load);
 			this->ResumeLayout(false);
@@ -267,5 +268,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	}
 	private: System::Void ListaOS_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void bt_listaos_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
 };
 }
