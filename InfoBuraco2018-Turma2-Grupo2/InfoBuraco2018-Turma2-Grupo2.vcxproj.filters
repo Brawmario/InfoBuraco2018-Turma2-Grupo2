@@ -81,6 +81,9 @@
     <ClCompile Include="FormulacaoDePlanoDeSaida.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EmitirRelatorio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TelaCriarBuraco.h">
@@ -149,6 +152,9 @@
     <ClInclude Include="FormulacaoDePlanoDeSaida.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EmitirRelatorio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TelaCriarBuraco.resx">
@@ -206,6 +212,12 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaAlterarMaterial.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulacaoDePlanoDeSaida.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeBuracos.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
