@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="TelaCriarBuraco.cpp" />
     <ClCompile Include="TelaListaOS.cpp" />
+    <ClCompile Include="TelaListaOSGestor.cpp" />
     <ClCompile Include="TelaLogin.cpp" />
     <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
@@ -150,6 +151,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaListaOS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TelaListaOSGestor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TelaLogin.h">
@@ -166,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaListaOS.resx">
       <DependentUpon>TelaListaOS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaListaOSGestor.resx">
+      <DependentUpon>TelaListaOSGestor.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaRealizacaoOS.resx">
       <DependentUpon>TelaRealizacaoOS.h</DependentUpon>
