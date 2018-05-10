@@ -75,6 +75,12 @@
     <ClCompile Include="TelaListaOSGestor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ListaDeBuracos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormulacaoDePlanoDeSaida.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TelaCriarBuraco.h">
@@ -135,6 +141,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TelaListaOSGestor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDeBuracos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormulacaoDePlanoDeSaida.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
