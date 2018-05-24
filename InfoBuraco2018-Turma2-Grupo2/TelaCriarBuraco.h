@@ -55,6 +55,8 @@ namespace InfoBuraco2018Turma2Grupo2 {
 	private: System::Windows::Forms::TextBox^  tb2_criarburaco;
 	private: System::Windows::Forms::TextBox^  tb3_criarburaco;
 	private: System::Windows::Forms::DateTimePicker^  dtp_criarburaco;
+	private: System::Windows::Forms::OpenFileDialog^  ofd_criarburaco;
+
 
 	protected:
 
@@ -90,6 +92,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->tb2_criarburaco = (gcnew System::Windows::Forms::TextBox());
 			this->tb3_criarburaco = (gcnew System::Windows::Forms::TextBox());
 			this->dtp_criarburaco = (gcnew System::Windows::Forms::DateTimePicker());
+			this->ofd_criarburaco = (gcnew System::Windows::Forms::OpenFileDialog());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_criarburaco))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -234,6 +237,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->bt3_criarburaco->TabIndex = 14;
 			this->bt3_criarburaco->Text = L"Upload";
 			this->bt3_criarburaco->UseVisualStyleBackColor = true;
+			this->bt3_criarburaco->Click += gcnew System::EventHandler(this, &TelaCriarBuraco::bt3_criarburaco_Click);
 			// 
 			// pb_criarburaco
 			// 
@@ -270,6 +274,10 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			this->dtp_criarburaco->Name = L"dtp_criarburaco";
 			this->dtp_criarburaco->Size = System::Drawing::Size(121, 20);
 			this->dtp_criarburaco->TabIndex = 19;
+			// 
+			// ofd_criarburaco
+			// 
+			this->ofd_criarburaco->FileName = L"openFileDialog1";
 			// 
 			// TelaCriarBuraco
 			// 
@@ -331,6 +339,9 @@ private: System::Void bt2_criarburaco_Click(System::Object^  sender, System::Eve
 }
 private: System::Void bt1_criarburaco_Click(System::Object^  sender, System::EventArgs^  e) {
 	Close();
+}
+private: System::Void bt3_criarburaco_Click(System::Object^  sender, System::EventArgs^  e) {
+	ofd_criarburaco->ShowDialog();
 }
 };
 }

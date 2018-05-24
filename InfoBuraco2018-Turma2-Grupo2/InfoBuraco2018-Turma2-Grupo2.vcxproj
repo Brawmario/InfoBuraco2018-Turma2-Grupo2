@@ -142,7 +142,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MySQLDAO.cpp" />
+    <ClCompile Include="dao\MySQLDAO.cpp" />
     <ClCompile Include="TelaEmitirRelatorio.cpp" />
     <ClCompile Include="TelaFormulacaoDePlanoDeSaida.cpp" />
     <ClCompile Include="TelaListaDeBuracos.cpp" />
@@ -153,7 +153,7 @@
     <ClCompile Include="TelaRealizacaoOS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MySQLDAO.h" />
+    <ClInclude Include="dao\MySQLDAO.h" />
     <ClInclude Include="TelaEmitirRelatorio.h">
       <FileType>CppForm</FileType>
     </ClInclude>
