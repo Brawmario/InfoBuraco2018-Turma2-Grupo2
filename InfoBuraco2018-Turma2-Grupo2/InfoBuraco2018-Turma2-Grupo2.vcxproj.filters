@@ -24,6 +24,9 @@
     <ClCompile Include="TelaEmitirRelatorio.cpp" />
     <ClCompile Include="TelaFormulacaoDePlanoDeSaida.cpp" />
     <ClCompile Include="TelaListaDeBuracos.cpp" />
+    <ClCompile Include="MySQLDAO.cpp">
+      <Filter>dao</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TelaCriarBuraco.h" />
@@ -49,6 +52,9 @@
     <ClInclude Include="TelaEmitirRelatorio.h" />
     <ClInclude Include="TelaFormulacaoDePlanoDeSaida.h" />
     <ClInclude Include="TelaListaDeBuracos.h" />
+    <ClInclude Include="MySQLDAO.h">
+      <Filter>dao</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TelaCriarBuraco.resx" />
@@ -74,5 +80,10 @@
     <EmbeddedResource Include="TelaEmitirRelatorio.resx" />
     <EmbeddedResource Include="TelaFormulacaoDePlanoDeSaida.resx" />
     <EmbeddedResource Include="TelaListaDeBuracos.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="dao">
+      <UniqueIdentifier>{c8e28c51-7e8c-4f10-b710-fbbb85a4d468}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
