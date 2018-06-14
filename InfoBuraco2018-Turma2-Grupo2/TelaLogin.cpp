@@ -1,5 +1,4 @@
 #include "TelaLogin.h"
-#include "dao/MySQLDAO.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

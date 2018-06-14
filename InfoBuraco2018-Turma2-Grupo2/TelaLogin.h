@@ -173,13 +173,13 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// tsmi_novaConta
 			// 
 			this->tsmi_novaConta->Name = L"tsmi_novaConta";
-			this->tsmi_novaConta->Size = System::Drawing::Size(180, 22);
+			this->tsmi_novaConta->Size = System::Drawing::Size(161, 22);
 			this->tsmi_novaConta->Text = L"Criar nova conta";
 			// 
 			// tsmi_sair
 			// 
 			this->tsmi_sair->Name = L"tsmi_sair";
-			this->tsmi_sair->Size = System::Drawing::Size(180, 22);
+			this->tsmi_sair->Size = System::Drawing::Size(161, 22);
 			this->tsmi_sair->Text = L"Sair";
 			this->tsmi_sair->Click += gcnew System::EventHandler(this, &TelaLogin::tsmi_sair_Sair);
 			// 
@@ -280,6 +280,29 @@ private: System::Void bt_debugAcessor_Logar(System::Object^  sender, System::Eve
 private: System::Void bt_debugGestor_Logar(System::Object^  sender, System::EventArgs^  e) {
 	MenuGestor^ Gestor = gcnew MenuGestor();
 	Gestor->ShowDialog();
+	/*
+	#include "dao/MySQLDAO.h"
+	#include <msclr\marshal_cppstd.h>
+	std::string sql, log;
+	sql::Connection * connection;
+	sql::PreparedStatement * preparedStatement;
+	sql::ResultSet *resultSet;
+	sql = "";
+	try {
+		MySQLDAO * MySQL = MySQLDAO::getInstance();
+		connection = MySQL->getConnection();
+		preparedStatement = connection->prepareStatement("SELECT * FROM db_b.Conta;");
+		resultSet = preparedStatement->executeQuery();
+		while (resultSet->next()) {
+			sql = sql + resultSet->getString(3).c_str() + " ";
+			this->tb_log->Text = msclr::interop::marshal_as<String^>(sql);
+		}
+	}
+	catch (sql::SQLException e) {
+		connection->close();
+		log = e.what();
+	}
+	*/
 }
 private: System::Void bt_debugDespachador_Logar(System::Object^  sender, System::EventArgs^  e) {
 	MenuDespachador^ Despachador = gcnew MenuDespachador();
