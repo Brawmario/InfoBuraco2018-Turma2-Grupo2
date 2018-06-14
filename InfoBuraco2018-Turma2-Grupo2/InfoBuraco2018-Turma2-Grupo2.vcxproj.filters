@@ -27,6 +27,42 @@
     <ClCompile Include="dao\MySQLDAO.cpp">
       <Filter>dao</Filter>
     </ClCompile>
+    <ClCompile Include="Models\Buraco.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Conta.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Equipamento.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Equipe.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Fatura.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Material.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\MensagemDeFinalizaçãoDeOS.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\OS.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\PlanoSaida.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Reclamacao.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\RegistroDeComprimentoDeOS.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Relatorio.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TelaCriarBuraco.h" />
@@ -54,6 +90,42 @@
     <ClInclude Include="TelaListaDeBuracos.h" />
     <ClInclude Include="dao\MySQLDAO.h">
       <Filter>dao</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Buraco.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Conta.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Equipamento.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Equipe.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Fatura.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Material.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\MensagemDeFinalizaçãoDeOS.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\OS.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\PlanoSaida.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Reclamacao.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\RegistroDeComprimentoDeOS.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Relatorio.h">
+      <Filter>Models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
