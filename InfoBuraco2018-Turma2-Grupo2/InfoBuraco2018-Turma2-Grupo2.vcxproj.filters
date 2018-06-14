@@ -85,5 +85,8 @@
     <Filter Include="dao">
       <UniqueIdentifier>{1af7f730-6e87-4d01-bbaf-106b97d81000}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{bbc4debe-a4c9-464f-a7cf-1c6ab23bd53e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
