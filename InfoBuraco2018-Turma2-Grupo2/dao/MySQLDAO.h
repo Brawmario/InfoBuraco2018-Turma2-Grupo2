@@ -6,7 +6,7 @@
 #include <cppconn/statement.h>
 #include <cppconn/prepared_statement.h>
 #include <iostream>
-using namespace std;
+
 //Begin section for file MySQLDAO.h
 //TODO: Add definitions that you want preserved
 //End section for file MySQLDAO.h
@@ -19,9 +19,9 @@ class MySQLDAO {
 private:
 	sql::Driver * driver;
 	sql::Connection * conn;
-	string url;
-	string user;
-	string pass;
+	std::string url;
+	std::string user;
+	std::string pass;
 	static MySQLDAO * instance;
 	MySQLDAO();
 	//Begin section for MySQLDAO

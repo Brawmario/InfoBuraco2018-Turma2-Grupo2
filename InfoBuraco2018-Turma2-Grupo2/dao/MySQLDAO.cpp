@@ -14,7 +14,7 @@ MySQLDAO::MySQLDAO()
 
 	sql::Statement *stmt;
 	sql::PreparedStatement *pstmt;
-	string log = "";
+	std::string log = "";
 	this->url = "tcp://143.107.102.55:3306/db_b";
 	this->pass = "grupo_b";
 	this->user = "grupo_b";
