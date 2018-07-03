@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file RegistroDeComprimentoDeOS.h
 
+#include<string>
 
 class Relatorio; //Dependency Generated Source:RegistroDeComprimentoDeOS Target:Relatorio
 
@@ -35,17 +36,17 @@ class RegistroDeComprimentoDeOS
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * data;
+        std::string data;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * ImagemDoBuracoConsertado;
+        std::string ImagemDoBuracoConsertado;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * statusAtualizadoDaOS;
+        std::string statusAtualizadoDaOS;
 
 
 
@@ -94,19 +95,19 @@ class RegistroDeComprimentoDeOS
 
         //get data
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_data(); 
+        inline std::string & get_data(); 
 
 
 
         //get ImagemDoBuracoConsertado
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_ImagemDoBuracoConsertado(); 
+        inline std::string & get_ImagemDoBuracoConsertado(); 
 
 
 
         //get statusAtualizadoDaOS
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_statusAtualizadoDaOS(); 
+        inline std::string & get_statusAtualizadoDaOS(); 
 
 
 

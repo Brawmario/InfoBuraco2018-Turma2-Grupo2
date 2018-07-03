@@ -16,13 +16,13 @@ OS::~OS()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & OS::get_identificacao() 
+std::string & OS::get_identificacao() 
 {
     //TODO Auto-generated method stub
     return identificacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & OS::get_prioridadeAtendimento() 
+std::string & OS::get_prioridadeAtendimento() 
 {
     //TODO Auto-generated method stub
     return prioridadeAtendimento;
@@ -76,7 +76,7 @@ void OS::set_custoEstimado(float & custoEstimado)
     this->custoEstimado = custoEstimado;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & OS::get_status() 
+std::string & OS::get_status() 
 {
     //TODO Auto-generated method stub
     return status;

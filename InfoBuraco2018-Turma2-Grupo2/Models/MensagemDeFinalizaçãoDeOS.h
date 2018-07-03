@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file MensagemDeFinalizaçãoDeOS.h
 
+#include<string>
 
 class Reclamacao; //Dependency Generated Source:MensagemDeFinalizaçãoDeOS Target:Reclamacao
 
@@ -26,12 +27,12 @@ class MensagemDeFinalizaçãoDeOS
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * texto;
+        std::string texto;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * destinatario;
+        std::string destinatario;
 
 
 
@@ -60,13 +61,13 @@ class MensagemDeFinalizaçãoDeOS
 
         //get texto
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_texto(); 
+        inline std::string & get_texto(); 
 
 
 
         //get destinatario
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_destinatario(); 
+        inline std::string & get_destinatario(); 
 
 
 

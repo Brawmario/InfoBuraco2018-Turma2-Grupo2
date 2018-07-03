@@ -27,13 +27,13 @@ void Conta::set_tipo(int & tipo)
     this->tipo = tipo;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Conta::get_login() 
+std::string & Conta::get_login() 
 {
     //TODO Auto-generated method stub
     return login;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Conta::get_Senha() 
+std::string & Conta::get_Senha() 
 {
     //TODO Auto-generated method stub
     return Senha;

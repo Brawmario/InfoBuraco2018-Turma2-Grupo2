@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Conta.h
 
+#include<string>
 
 
 
@@ -24,7 +25,7 @@ class Conta
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * login;
+        std::string login;
 
 
 
@@ -32,7 +33,7 @@ class Conta
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * Senha;
+        std::string Senha;
 
 
 
@@ -62,13 +63,13 @@ class Conta
 
         //get login
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_login(); 
+        inline std::string & get_login(); 
 
 
 
         //get Senha
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_Senha(); 
+        inline std::string & get_Senha(); 
 
 
 

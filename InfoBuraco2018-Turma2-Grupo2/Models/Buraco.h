@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Buraco.h
 
+#include<string>
 
 class Reclamacao; //Dependency Generated Source:Buraco Target:Reclamacao
 
@@ -26,27 +27,27 @@ class Buraco
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * identificacao;
+        std::string identificacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * localizacao;
+        std::string localizacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * tamanho;
+        std::string tamanho;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * posicaoRelativa;
+        std::string posicaoRelativa;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * regional;
+        std::string regional;
 
 
 
@@ -95,31 +96,31 @@ class Buraco
 
         //get identificacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_identificacao(); 
+        inline std::string & get_identificacao(); 
 
 
 
         //get localizacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_localizacao(); 
+        inline std::string & get_localizacao(); 
 
 
 
         //get tamanho
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_tamanho(); 
+        inline std::string & get_tamanho(); 
 
 
 
         //get posicaoRelativa
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_posicaoRelativa(); 
+        inline std::string & get_posicaoRelativa(); 
 
 
 
         //get regional
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_regional(); 
+        inline std::string & get_regional(); 
 
 
 

@@ -16,7 +16,7 @@ PlanoSaida::~PlanoSaida()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & PlanoSaida::get_data() 
+std::string & PlanoSaida::get_data() 
 {
     //TODO Auto-generated method stub
     return data;

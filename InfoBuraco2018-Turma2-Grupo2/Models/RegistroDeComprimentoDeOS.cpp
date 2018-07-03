@@ -16,19 +16,19 @@ RegistroDeComprimentoDeOS::~RegistroDeComprimentoDeOS()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & RegistroDeComprimentoDeOS::get_data() 
+std::string & RegistroDeComprimentoDeOS::get_data() 
 {
     //TODO Auto-generated method stub
     return data;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & RegistroDeComprimentoDeOS::get_ImagemDoBuracoConsertado() 
+std::string & RegistroDeComprimentoDeOS::get_ImagemDoBuracoConsertado() 
 {
     //TODO Auto-generated method stub
     return ImagemDoBuracoConsertado;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & RegistroDeComprimentoDeOS::get_statusAtualizadoDaOS() 
+std::string & RegistroDeComprimentoDeOS::get_statusAtualizadoDaOS() 
 {
     //TODO Auto-generated method stub
     return statusAtualizadoDaOS;

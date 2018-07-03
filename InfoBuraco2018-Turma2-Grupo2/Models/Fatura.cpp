@@ -28,7 +28,7 @@ void Fatura::set_valor(float & valor)
     this->valor = valor;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Fatura::get_dataEmissao() 
+std::string & Fatura::get_dataEmissao() 
 {
     //TODO Auto-generated method stub
     return dataEmissao;

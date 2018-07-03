@@ -16,13 +16,13 @@ Relatorio::~Relatorio()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Relatorio::get_tipo() 
+std::string & Relatorio::get_tipo() 
 {
     //TODO Auto-generated method stub
     return tipo;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Relatorio::get_texto() 
+std::string & Relatorio::get_texto() 
 {
     //TODO Auto-generated method stub
     return texto;

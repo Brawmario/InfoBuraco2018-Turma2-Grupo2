@@ -28,7 +28,7 @@ void Equipe::set_numeroProfissionais(int & numeroProfissionais)
     this->numeroProfissionais = numeroProfissionais;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Equipe::get_nome() 
+std::string & Equipe::get_nome() 
 {
     //TODO Auto-generated method stub
     return nome;

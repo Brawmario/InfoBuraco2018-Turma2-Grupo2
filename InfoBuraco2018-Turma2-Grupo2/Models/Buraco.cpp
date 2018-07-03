@@ -16,31 +16,31 @@ Buraco::~Buraco()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Buraco::get_identificacao() 
+std::string & Buraco::get_identificacao() 
 {
     //TODO Auto-generated method stub
     return identificacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Buraco::get_localizacao() 
+std::string & Buraco::get_localizacao() 
 {
     //TODO Auto-generated method stub
     return localizacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Buraco::get_tamanho() 
+std::string & Buraco::get_tamanho() 
 {
     //TODO Auto-generated method stub
     return tamanho;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Buraco::get_posicaoRelativa() 
+std::string & Buraco::get_posicaoRelativa() 
 {
     //TODO Auto-generated method stub
     return posicaoRelativa;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Buraco::get_regional() 
+std::string & Buraco::get_regional() 
 {
     //TODO Auto-generated method stub
     return regional;

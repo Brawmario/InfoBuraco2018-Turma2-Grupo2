@@ -16,7 +16,7 @@ Reclamacao::~Reclamacao()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Reclamacao::get_contato() 
+std::string & Reclamacao::get_contato() 
 {
     //TODO Auto-generated method stub
     return contato;
@@ -34,19 +34,19 @@ const char * & Reclamacao::get_contato()
 	// Deu ERROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ->    this->data = data;
 	// Deu ERROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ->}
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Reclamacao::get_hora() 
+std::string & Reclamacao::get_hora() 
 {
     //TODO Auto-generated method stub
     return hora;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Reclamacao::get_identificacao() 
+std::string & Reclamacao::get_identificacao() 
 {
     //TODO Auto-generated method stub
     return identificacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Reclamacao::get_fotografia() 
+std::string & Reclamacao::get_fotografia() 
 {
     //TODO Auto-generated method stub
     return fotografia;

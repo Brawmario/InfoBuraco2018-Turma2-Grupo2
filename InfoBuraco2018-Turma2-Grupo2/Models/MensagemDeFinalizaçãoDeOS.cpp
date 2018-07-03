@@ -16,13 +16,13 @@ MensagemDeFinalizaçãoDeOS::~MensagemDeFinalizaçãoDeOS()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & MensagemDeFinalizaçãoDeOS::get_texto() 
+std::string & MensagemDeFinalizaçãoDeOS::get_texto() 
 {
     //TODO Auto-generated method stub
     return texto;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & MensagemDeFinalizaçãoDeOS::get_destinatario() 
+std::string & MensagemDeFinalizaçãoDeOS::get_destinatario() 
 {
     //TODO Auto-generated method stub
     return destinatario;

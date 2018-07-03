@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Fatura.h
 
+#include<string>
 
 class RegistroDeComprimentoDeOS; //Dependency Generated Source:Fatura Target:RegistroDeComprimentoDeOS
 
@@ -28,7 +29,7 @@ class Fatura
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * dataEmissao;
+        std::string dataEmissao;
 
 
 
@@ -64,7 +65,7 @@ class Fatura
 
         //get dataEmissao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_dataEmissao(); 
+        inline std::string & get_dataEmissao(); 
 
 
 

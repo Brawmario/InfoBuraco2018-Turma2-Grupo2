@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Material.h
 
+#include<string>
 
 class PlanoSaida; //Dependency Generated Source:Material Target:PlanoSaida
 
@@ -23,7 +24,7 @@ class Material
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * nome;
+        std::string nome;
 
 
 
@@ -33,7 +34,7 @@ class Material
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * unidade;
+        std::string unidade;
 
 
 
@@ -57,7 +58,7 @@ class Material
 
         //get nome
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_nome(); 
+        inline std::string & get_nome(); 
 
 
 
@@ -75,7 +76,7 @@ class Material
 
         //get unidade
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_unidade(); 
+        inline std::string & get_unidade(); 
 
 
 

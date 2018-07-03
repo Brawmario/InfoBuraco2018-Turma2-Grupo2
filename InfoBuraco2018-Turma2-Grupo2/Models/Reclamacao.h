@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Reclamacao.h
 
+#include<string>
 
 class Buraco; //Dependency Generated Source:Reclamacao Target:Buraco
 
@@ -26,7 +27,7 @@ class Reclamacao
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * contato;
+        std::string contato;
 
 
 
@@ -36,17 +37,17 @@ class Reclamacao
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * hora;
+        std::string hora;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * identificacao;
+        std::string identificacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * fotografia;
+        std::string fotografia;
 
 
 
@@ -75,7 +76,7 @@ class Reclamacao
 
         //get contato
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_contato(); 
+        inline std::string & get_contato(); 
 
 
 
@@ -93,19 +94,19 @@ class Reclamacao
 
         //get hora
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_hora(); 
+        inline std::string & get_hora(); 
 
 
 
         //get identificacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_identificacao(); 
+        inline std::string & get_identificacao(); 
 
 
 
         //get fotografia
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_fotografia(); 
+        inline std::string & get_fotografia(); 
 
 
 

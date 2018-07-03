@@ -16,7 +16,7 @@ Material::~Material()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Material::get_nome() 
+std::string & Material::get_nome() 
 {
     //TODO Auto-generated method stub
     return nome;
@@ -34,7 +34,7 @@ void Material::set_custoUnidade(float & custoUnidade)
     this->custoUnidade = custoUnidade;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Material::get_unidade() 
+std::string & Material::get_unidade() 
 {
     //TODO Auto-generated method stub
     return unidade;

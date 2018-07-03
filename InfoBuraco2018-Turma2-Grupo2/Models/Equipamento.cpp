@@ -16,7 +16,7 @@ Equipamento::~Equipamento()
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Equipamento::get_identificacao() 
+std::string & Equipamento::get_identificacao() 
 {
     //TODO Auto-generated method stub
     return identificacao;
@@ -34,7 +34,7 @@ void Equipamento::set_custo(float & custo)
     this->custo = custo;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-const char * & Equipamento::get_dataFabricacao() 
+std::string & Equipamento::get_dataFabricacao() 
 {
     //TODO Auto-generated method stub
     return dataFabricacao;

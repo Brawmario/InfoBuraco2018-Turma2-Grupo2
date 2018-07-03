@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file OS.h
 
+#include<string>
 
 class Buraco; //Dependency Generated Source:OS Target:Buraco
 
@@ -29,12 +30,12 @@ class OS
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * identificacao;
+        std::string identificacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * prioridadeAtendimento;
+        std::string prioridadeAtendimento;
 
 
 
@@ -59,7 +60,7 @@ class OS
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * status;
+        std::string status;
 
 
 
@@ -103,13 +104,13 @@ class OS
 
         //get identificacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_identificacao(); 
+        inline std::string & get_identificacao(); 
 
 
 
         //get prioridadeAtendimento
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_prioridadeAtendimento(); 
+        inline std::string & get_prioridadeAtendimento(); 
 
 
 
@@ -163,7 +164,7 @@ class OS
 
         //get status
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_status(); 
+        inline std::string & get_status(); 
 
 
 

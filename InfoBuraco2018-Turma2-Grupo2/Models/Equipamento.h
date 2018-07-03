@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Equipamento.h
 
+#include<string>
 
 class PlanoSaida; //Dependency Generated Source:Equipamento Target:PlanoSaida
 
@@ -23,7 +24,7 @@ class Equipamento
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * identificacao;
+        std::string identificacao;
 
 
 
@@ -33,7 +34,7 @@ class Equipamento
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * dataFabricacao;
+        std::string dataFabricacao;
 
 
 
@@ -57,7 +58,7 @@ class Equipamento
 
         //get identificacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_identificacao(); 
+        inline std::string & get_identificacao(); 
 
 
 
@@ -75,7 +76,7 @@ class Equipamento
 
         //get dataFabricacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_dataFabricacao(); 
+        inline std::string & get_dataFabricacao(); 
 
 
 

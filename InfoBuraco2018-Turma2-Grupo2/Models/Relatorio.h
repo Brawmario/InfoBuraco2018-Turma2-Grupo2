@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Relatorio.h
 
+#include<string>
 
 class RegistroDeComprimentoDeOS; //Dependency Generated Source:Relatorio Target:RegistroDeComprimentoDeOS
 
@@ -23,12 +24,12 @@ class Relatorio
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * tipo;
+        std::string tipo;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * texto;
+        std::string texto;
 
 
 
@@ -52,13 +53,13 @@ class Relatorio
 
         //get tipo
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_tipo(); 
+        inline std::string & get_tipo(); 
 
 
 
         //get texto
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_texto(); 
+        inline std::string & get_texto(); 
 
 
 

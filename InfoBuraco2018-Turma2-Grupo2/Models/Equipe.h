@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file Equipe.h
 
+#include<string>
 
 class PlanoSaida; //Dependency Generated Source:Equipe Target:PlanoSaida
 
@@ -28,7 +29,7 @@ class Equipe
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * nome;
+        std::string nome;
 
 
 
@@ -69,7 +70,7 @@ class Equipe
 
         //get nome
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_nome(); 
+        inline std::string & get_nome(); 
 
 
 

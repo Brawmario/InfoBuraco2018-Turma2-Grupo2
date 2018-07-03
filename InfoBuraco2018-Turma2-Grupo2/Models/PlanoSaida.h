@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file PlanoSaida.h
 
+#include<string>
 
 class OS; //Dependency Generated Source:PlanoSaida Target:OS
 
@@ -35,7 +36,7 @@ class PlanoSaida
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        const char * data;
+        std::string data;
 
 
 
@@ -79,7 +80,7 @@ class PlanoSaida
 
         //get data
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline const char * & get_data(); 
+        inline std::string & get_data(); 
 
 
 
