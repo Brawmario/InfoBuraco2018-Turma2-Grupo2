@@ -1,0 +1,65 @@
+INTRUÇÕES DE COMPILAÇÃO
+---------------------------------------------------------------------------------------------------------
+
+Essas instruções são melhores explicadas nos slides "Configuração do conector mysql na ferramenta visual studio2017" de aula.
+
+Se o programa for compilado em um computador da sala PCS a configuração já está feita
+
+1. Baixar e descompactar as seguintes dependencias:
+
+Biblioteca boost c++:
+https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.zip
+
+Conector MySQL C++ v8.0
+https://dev.mysql.com/get/Downloads/Connector-C++/mysql-connector-c++-8.0.11-windows-x86-64bit.zip
+
+2. Abrir as propriedades do projeto fazendo click 
+   direito na raiz do projeto e selecionando 
+   “Properties” dentro do Visual Studio
+   
+3. Em C/C++->General, adicionar as seguintes pastas para o include:
+
+(aonde boost foi decompactado)\boost_1_67_0\
+
+(aonde MySQL foi decompactado)\mysql-connector-c++-8.0.11-windows-x86-64bit\include\jdbc\
+
+4. No menu Linker, selecionar “Additional library directories” e adicionar a seguinte pasta:
+
+(aonde MySQL foi decompactado)\mysql-connector-c++-8.0.11-windows-x86-64bit\lib64\vs14\
+
+5. Pronto, peça para o Visual Studio compilar o projeto
+
+
+
+---------------------------------------------------------------------------------------------------
+ROTINA DE TESTES
+--------------------------------------------------------------------------------------------------
+
+
+1. Testar Lista de OS do despachador
+
+- Apertar "Logar como despachador" na tela de Login
+- Apertar "Lista de OS" no Menu Principal
+
+Note as OS listadas nessa tela. As OS listadas são pegas do Banco de Dado e são apenas as que
+estão em andamento. Clique nelas para obter todas as informações pertinentes.
+
+2. Testar Manipulação de Prioridade de OS do Gestor
+
+- Apertar "Logar como gestor" na tela de Login
+- Apertar "Manipulação de prioridade de OS" no Menu Principal
+
+Note que a tela mostrada é bem parecida com a do despachador, mas com uma função a mais. Ao clicar
+Em uma OS o gestor tem a opção de alterar a prioridade da OS. Para efeito de teste, modifique a 
+prioriade de uma das OS para testar a mudança da prioridade e repita o teste 1 para confirmar a
+propagação dessa mudança no banco de dados. Essa tela mostra todas as OSs, até as concluídas.
+
+3. Testar Registro de Realização de OS do Encarregado
+
+- Apertar "Logar como Encarregado" na tela de Login
+- Apertar "Registro de Realização de OS" no Menu Principal
+
+Aqui você pode modificar o status das OSs como "Em andamento" e "Concluído", além de outros detalhes sobre a obra.
+Se uma OS for registrada ainda como "Em Andamento", a sua prioriade automaticamente vira "alta" conforme a especificação
+do projeto. Experimente mudar os estados de algumas OSs e veja como essas escolhas se reflete nos status e na prioridade
+das OSs nos testes anteriores.
