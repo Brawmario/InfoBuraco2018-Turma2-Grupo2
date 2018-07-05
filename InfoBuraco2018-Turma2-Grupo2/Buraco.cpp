@@ -1,138 +1,115 @@
-#include "OS.h"
-//Begin section for file OS.cpp
+#include "Buraco.h"
+//Begin section for file Buraco.cpp
 //TODO: Add definitions that you want preserved
-//End section for file OS.cpp
+//End section for file Buraco.cpp
 
 
 
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-OS::OS() 
+Buraco::Buraco() 
 {
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-OS::~OS() 
+Buraco::~Buraco() 
 {
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-std::string & OS::get_identificacao() 
+std::string & Buraco::get_identificacao() 
 {
     //TODO Auto-generated method stub
     return identificacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-std::string & OS::get_prioridadeAtendimento() 
+std::string & Buraco::get_localizacao() 
 {
     //TODO Auto-generated method stub
-    return prioridadeAtendimento;
+    return localizacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-int & OS::get_estimativaPessoal() 
+std::string & Buraco::get_tamanho() 
 {
     //TODO Auto-generated method stub
-    return estimativaPessoal;
+    return tamanho;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_estimativaPessoal(int & estimativaPessoal) 
+std::string & Buraco::get_posicaoRelativa() 
 {
     //TODO Auto-generated method stub
-    this->estimativaPessoal = estimativaPessoal;
+    return posicaoRelativa;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-float & OS::get_estimativaEquipamento() 
+std::string & Buraco::get_regional() 
 {
     //TODO Auto-generated method stub
-    return estimativaEquipamento;
+    return regional;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_estimativaEquipamento(float & estimativaEquipamento) 
+int & Buraco::get_numReclamacoes() 
 {
     //TODO Auto-generated method stub
-    this->estimativaEquipamento = estimativaEquipamento;
+    return numReclamacoes;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-float & OS::get_estimativaMaterial() 
+void Buraco::set_numReclamacoes(int & numReclamacoes) 
 {
     //TODO Auto-generated method stub
-    return estimativaMaterial;
+    this->numReclamacoes = numReclamacoes;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_estimativaMaterial(float & estimativaMaterial) 
+bool & Buraco::get_buracoReaberto() 
 {
     //TODO Auto-generated method stub
-    this->estimativaMaterial = estimativaMaterial;
+    return buracoReaberto;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-float & OS::get_custoEstimado() 
+void Buraco::set_buracoReaberto(bool & buracoReaberto) 
 {
     //TODO Auto-generated method stub
-    return custoEstimado;
+    this->buracoReaberto = buracoReaberto;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_custoEstimado(float & custoEstimado) 
+Reclamacao * & Buraco::get_reclamacao() 
 {
     //TODO Auto-generated method stub
-    this->custoEstimado = custoEstimado;
+    return reclamacao;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-std::string & OS::get_status() 
-{
-    //TODO Auto-generated method stub
-    return status;
-}
-//@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-Buraco * & OS::get_buraco() 
-{
-    //TODO Auto-generated method stub
-    return buraco;
-}
-//@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_buraco(Buraco * & buraco) 
+void Buraco::set_reclamacao(Reclamacao * & reclamacao) 
 {
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-Buraco * & OS::get_buraco2() 
+OS * & Buraco::get_oS() 
 {
     //TODO Auto-generated method stub
-    return buraco2;
+    return oS;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_buraco2(Buraco * & buraco2) 
-{
-    //TODO Auto-generated method stub
-}
-//@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-Buraco * & OS::get_buraco3() 
-{
-    //TODO Auto-generated method stub
-    return buraco3;
-}
-//@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_buraco3(Buraco * & buraco3) 
+void Buraco::set_oS(OS * & oS) 
 {
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-PlanoSaida * & OS::get_planoSaida() 
+OS * & Buraco::get_oS2() 
 {
     //TODO Auto-generated method stub
-    return planoSaida;
+    return oS2;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_planoSaida(PlanoSaida * & planoSaida) 
+void Buraco::set_oS2(OS * & oS2) 
 {
     //TODO Auto-generated method stub
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-RegistroDeComprimentoDeOS * & OS::get_registroDeComprimentoDeOS() 
+OS * & Buraco::get_oS3() 
 {
     //TODO Auto-generated method stub
-    return registroDeComprimentoDeOS;
+    return oS3;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void OS::set_registroDeComprimentoDeOS(RegistroDeComprimentoDeOS * & registroDeComprimentoDeOS) 
+void Buraco::set_oS3(OS * & oS3) 
 {
     //TODO Auto-generated method stub
 }

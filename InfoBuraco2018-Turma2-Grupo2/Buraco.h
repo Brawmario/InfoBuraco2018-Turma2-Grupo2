@@ -1,30 +1,27 @@
-#ifndef OS_H
-#define OS_H
-//Begin section for file OS.h
+#ifndef BURACO_H
+#define BURACO_H
+//Begin section for file Buraco.h
 //TODO: Add definitions that you want preserved
-//End section for file OS.h
+//End section for file Buraco.h
 
 #include<string>
 
-class Buraco; //Dependency Generated Source:OS Target:Buraco
+class Reclamacao; //Dependency Generated Source:Buraco Target:Reclamacao
 
 
-class PlanoSaida; //Dependency Generated Source:OS Target:PlanoSaida
-
-
-class RegistroDeComprimentoDeOS; //Dependency Generated Source:OS Target:RegistroDeComprimentoDeOS
+class OS; //Dependency Generated Source:Buraco Target:OS
 
 
 
 
 
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-class OS
+class Buraco
 {
 
-    //Begin section for OS
+    //Begin section for Buraco
     //TODO: Add attributes that you want preserved
-    //End section for OS
+    //End section for Buraco
 
     private:
 
@@ -35,57 +32,52 @@ class OS
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        std::string prioridadeAtendimento;
+        std::string localizacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        int estimativaPessoal;
+        std::string tamanho;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        float estimativaEquipamento;
+        std::string posicaoRelativa;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        float estimativaMaterial;
+        std::string regional;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        float custoEstimado;
+        int numReclamacoes;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        std::string status;
+        bool buracoReaberto;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        Buraco * buraco;
+        Reclamacao * reclamacao;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        Buraco * buraco2;
+        OS * oS;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        Buraco * buraco3;
+        OS * oS2;
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        PlanoSaida * planoSaida;
-
-
-
-        //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        RegistroDeComprimentoDeOS * registroDeComprimentoDeOS;
+        OS * oS3;
 
 
 
@@ -93,12 +85,12 @@ class OS
     public:
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        OS(); 
+        Buraco(); 
 
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        virtual ~OS(); 
+        virtual ~Buraco(); 
 
 
 
@@ -108,127 +100,103 @@ class OS
 
 
 
-        //get prioridadeAtendimento
+        //get localizacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline std::string & get_prioridadeAtendimento(); 
+        inline std::string & get_localizacao(); 
 
 
 
-        //get estimativaPessoal
+        //get tamanho
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline int & get_estimativaPessoal(); 
+        inline std::string & get_tamanho(); 
 
 
 
-        //set estimativaPessoal
+        //get posicaoRelativa
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_estimativaPessoal(int & estimativaPessoal); 
+        inline std::string & get_posicaoRelativa(); 
 
 
 
-        //get estimativaEquipamento
+        //get regional
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline float & get_estimativaEquipamento(); 
+        inline std::string & get_regional(); 
 
 
 
-        //set estimativaEquipamento
+        //get numReclamacoes
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_estimativaEquipamento(float & estimativaEquipamento); 
+        inline int & get_numReclamacoes(); 
 
 
 
-        //get estimativaMaterial
+        //set numReclamacoes
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline float & get_estimativaMaterial(); 
+        inline void set_numReclamacoes(int & numReclamacoes); 
 
 
 
-        //set estimativaMaterial
+        //get buracoReaberto
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_estimativaMaterial(float & estimativaMaterial); 
+        inline bool & get_buracoReaberto(); 
 
 
 
-        //get custoEstimado
+        //set buracoReaberto
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline float & get_custoEstimado(); 
+        inline void set_buracoReaberto(bool & buracoReaberto); 
 
 
 
-        //set custoEstimado
+        //get reclamacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_custoEstimado(float & custoEstimado); 
+        inline Reclamacao * & get_reclamacao(); 
 
 
 
-        //get status
+        //set reclamacao
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline std::string & get_status(); 
+        inline void set_reclamacao(Reclamacao * & reclamacao); 
 
 
 
-        //get buraco
+        //get oS
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline Buraco * & get_buraco(); 
+        inline OS * & get_oS(); 
 
 
 
-        //set buraco
+        //set oS
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_buraco(Buraco * & buraco); 
+        inline void set_oS(OS * & oS); 
 
 
 
-        //get buraco2
+        //get oS2
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline Buraco * & get_buraco2(); 
+        inline OS * & get_oS2(); 
 
 
 
-        //set buraco2
+        //set oS2
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_buraco2(Buraco * & buraco2); 
+        inline void set_oS2(OS * & oS2); 
 
 
 
-        //get buraco3
+        //get oS3
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline Buraco * & get_buraco3(); 
+        inline OS * & get_oS3(); 
 
 
 
-        //set buraco3
+        //set oS3
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_buraco3(Buraco * & buraco3); 
+        inline void set_oS3(OS * & oS3); 
 
 
 
-        //get planoSaida
-        //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline PlanoSaida * & get_planoSaida(); 
-
-
-
-        //set planoSaida
-        //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_planoSaida(PlanoSaida * & planoSaida); 
-
-
-
-        //get registroDeComprimentoDeOS
-        //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline RegistroDeComprimentoDeOS * & get_registroDeComprimentoDeOS(); 
-
-
-
-        //set registroDeComprimentoDeOS
-        //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        inline void set_registroDeComprimentoDeOS(RegistroDeComprimentoDeOS * & registroDeComprimentoDeOS); 
-
-
-
-};  //end class OS
+};  //end class Buraco
 
 
 

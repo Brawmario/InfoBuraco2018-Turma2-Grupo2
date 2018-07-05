@@ -1,5 +1,6 @@
 #pragma once
-
+#include "dao/MySQLDAO.h"
+#include <msclr\marshal_cppstd.h>
 namespace InfoBuraco2018Turma2Grupo2 {
 
 	using namespace System;
@@ -21,6 +22,35 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			//
 			//TODO: Add the constructor code here
 			//
+			std::string sql, log;
+			sql::Connection * connection;
+			sql::PreparedStatement * preparedStatement;
+			sql::ResultSet *resultSet;
+			sql = "";
+			try {
+				MySQLDAO * MySQL = MySQLDAO::getInstance();
+				connection = MySQL->getConnection();
+				int vetor[5000];
+				int i = 0;
+				preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+				resultSet = preparedStatement->executeQuery();
+				this->lbox_listaosgestor->BeginUpdate();
+				while (resultSet->next()) {
+					vetor[i] = resultSet->getInt(1);
+					this->lbox_listaosgestor->Items->Add(String::Format("OS{0}", resultSet->getInt(1)));
+					i++;
+				}
+				this->lbox_listaosgestor->EndUpdate();
+			}
+			catch (sql::SQLException e) {
+				connection->close();
+				log = e.what();
+			}
+			
+
+			// Loop through and add 50 items to the ListBox.
+
+			
 		}
 
 	protected:
@@ -36,7 +66,6 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		}
 	private: System::Windows::Forms::ListBox^  lbox_listaosgestor;
 	private: System::Windows::Forms::Button^  bt1_listaosgestor;
-
 	private: System::Windows::Forms::Label^  lb1_listaosgestor;
 	private: System::Windows::Forms::Label^  lb2_listaosgestor;
 	private: System::Windows::Forms::Label^  lb3_listaosgestor;
@@ -99,11 +128,11 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// lbox_listaosgestor
 			// 
 			this->lbox_listaosgestor->FormattingEnabled = true;
-			this->lbox_listaosgestor->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
+			/*this->lbox_listaosgestor->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
 				L"OS0", L"OS1", L"OS2", L"OS3", L"OS4",
 					L"OS5", L"OS6", L"OS7", L"OS8", L"OS9", L"OS10", L"OS11", L"OS12", L"OS13", L"OS14", L"OS15", L"OS16", L"OS17", L"OS18", L"OS19",
 					L"OS20", L"OS21", L"OS22", L"OS23", L"OS24"
-			});
+			});*/
 			this->lbox_listaosgestor->Location = System::Drawing::Point(12, 43);
 			this->lbox_listaosgestor->Name = L"lbox_listaosgestor";
 			this->lbox_listaosgestor->Size = System::Drawing::Size(108, 277);
@@ -303,14 +332,44 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		}
 #pragma endregion
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-			this->lb8_listaosgestor->Text = "OS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb9_listaosgestor->Text = "PrioridadeOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb10_listaosgestor->Text = "PessoalOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb11_listaosgestor->Text = "EquipamentoOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb12_listaosgestor->Text = "MaterialOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb13_listaosgestor->Text = "CustoOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
-			this->lb14_listaosgestor->Text = "StatusOS" + Convert::ToString(this->lbox_listaosgestor->SelectedIndex);
+		std::string sql, log;
+		sql::Connection * connection;
+		sql::PreparedStatement * preparedStatement;
+		sql::ResultSet *resultSet;
+		sql = "";
+		try {
+			MySQLDAO * MySQL = MySQLDAO::getInstance();
+			connection = MySQL->getConnection();
+			int i = 0, j;
+			std::string sql;
+			preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+			resultSet = preparedStatement->executeQuery();
+			while (resultSet->next()) {
+				j = this->lbox_listaosgestor->SelectedIndex;
+				if (j == i) {
+					this->lb8_listaosgestor->Text = Convert::ToString(resultSet->getInt(1));
+					sql = resultSet->getString(2).c_str();
+					this->lb9_listaosgestor->Text =  msclr::interop::marshal_as<String^>(sql);
+					this->lb10_listaosgestor->Text = Convert::ToString(resultSet->getInt(3));
+					sql = resultSet->getString(4).c_str();
+					this->lb11_listaosgestor->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(5).c_str();
+					this->lb12_listaosgestor->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(6).c_str();
+					this->lb13_listaosgestor->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(7).c_str();
+					this->lb14_listaosgestor->Text = msclr::interop::marshal_as<String^>(sql);
+					
+				}
+				i++;
+				
+			}
 		}
+		catch (sql::SQLException e) {
+			connection->close();
+			log = e.what();
+		}
+	}
 	private: System::Void TelaListaOSGestor_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void chk_listaosgestor_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -327,7 +386,49 @@ private: System::Void bt1_listaosgestor_Click(System::Object^  sender, System::E
 	Close();
 }
 private: System::Void bt2_listaosgestor_Click(System::Object^  sender, System::EventArgs^  e) {
-	Close();
+	std::string sql, log;
+	sql::Connection * connection;
+	sql::PreparedStatement * preparedStatement,* preparedStatement2;
+	sql::ResultSet *resultSet, *resultSet2;
+	sql = "";
+	try {
+		MySQLDAO * MySQL = MySQLDAO::getInstance();
+		connection = MySQL->getConnection();
+		int i = 0, j, aux, aux2;
+		std::string sql;
+		System::String ^ query;
+		preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+		resultSet = preparedStatement->executeQuery();
+		while (resultSet->next()) {
+			j = this->lbox_listaosgestor->SelectedIndex;
+			if (j == i) {
+				aux = resultSet->getInt(1);
+				this->lb9_listaosgestor->Text = this->cb_listaosgestor->SelectedItem->ToString();
+				aux2 = this->cb_listaosgestor->SelectedIndex;
+				preparedStatement2 = connection->prepareStatement("UPDATE db_b.OS SET prioridadeAtendimento = ? WHERE id_OS = ?;");
+				if (aux2 == 0) {
+					preparedStatement2->setString(1, "Baixa");
+				}
+				else {
+					if (aux2 == 1) {
+						preparedStatement2->setString(1, "Media");
+					}
+					else {
+						preparedStatement2->setString(1, "Alta");
+					}
+				}
+				preparedStatement2->setInt(2, aux);
+				preparedStatement2->execute();
+				
+			}
+			i++;
+
+		}
+	}
+	catch (sql::SQLException e) {
+		connection->close();
+		log = e.what();
+	}
 }
 };
 }

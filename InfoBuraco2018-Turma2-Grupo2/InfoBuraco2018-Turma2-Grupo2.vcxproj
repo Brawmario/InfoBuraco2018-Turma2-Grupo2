@@ -102,13 +102,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\pcs3443\boost_1_67_0;D:\pcs3443\mysql-connector-c++-8.0.11-windows-x86-64bit\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\rodri\Downloads\boost_1_67_0;C:\Users\rodri\Downloads\mysql-connector-c++-8.0.11-windows-x86-64bit\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies) </AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>Main</EntryPointSymbol>
-      <AdditionalLibraryDirectories>D:\pcs3443\mysql-connector-c++-8.0.11-windows-x86-64bit\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\rodri\Downloads\mysql-connector-c++-8.0.11-windows-x86-64bit\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -150,11 +150,12 @@
     <ClCompile Include="Models\Fatura.cpp" />
     <ClCompile Include="Models\Material.cpp" />
     <ClCompile Include="Models\MensagemDeFinalizaçãoDeOS.cpp" />
-    <ClCompile Include="Models\OS.cpp" />
     <ClCompile Include="Models\PlanoSaida.cpp" />
     <ClCompile Include="Models\Reclamacao.cpp" />
     <ClCompile Include="Models\RegistroDeComprimentoDeOS.cpp" />
     <ClCompile Include="Models\Relatorio.cpp" />
+    <ClCompile Include="OS.cpp" />
+    <ClCompile Include="OSDAO.cpp" />
     <ClCompile Include="TelaEmitirRelatorio.cpp" />
     <ClCompile Include="TelaFormulacaoDePlanoDeSaida.cpp" />
     <ClCompile Include="TelaListaDeBuracos.cpp" />
@@ -173,11 +174,12 @@
     <ClInclude Include="Models\Fatura.h" />
     <ClInclude Include="Models\Material.h" />
     <ClInclude Include="Models\MensagemDeFinalizaçãoDeOS.h" />
-    <ClInclude Include="Models\OS.h" />
     <ClInclude Include="Models\PlanoSaida.h" />
     <ClInclude Include="Models\Reclamacao.h" />
     <ClInclude Include="Models\RegistroDeComprimentoDeOS.h" />
     <ClInclude Include="Models\Relatorio.h" />
+    <ClInclude Include="OS.h" />
+    <ClInclude Include="OSDAO.h" />
     <ClInclude Include="TelaEmitirRelatorio.h">
       <FileType>CppForm</FileType>
     </ClInclude>

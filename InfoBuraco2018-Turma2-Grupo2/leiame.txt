@@ -1,0 +1,7 @@
+Como rodar os testes:
+O sistema e login não foi implementado, portanto para entrar em cada uma das funções basta clicar no botão correspondente.
+Testar lista de os - clicar em despachador, clicar em lista de OS, selecionar OS
+Testar lista de os para gestor - clicar em gestor, clicar em lista de OS, selecionar OS
+Testar lista de os - clicar em despachador, clicar em manipulação de prioridade de OS, selecionar OS, possívelmente selecionar para alterar prioridade, escolher desejada e clicar em alterar
+Testar registro de realização - clicar em encarregado, clicar em registro, selecionar grupo, OS, e status e clicar em registrar.
+O resultado pode ser visto com consultas SQL.

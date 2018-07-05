@@ -1,4 +1,6 @@
 #pragma once
+#include "dao/MySQLDAO.h"
+#include <msclr\marshal_cppstd.h>
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -21,6 +23,49 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			//
 			//TODO: Add the constructor code here
 			//
+
+			//
+			std::string sql, log;
+			sql::Connection * connection;
+			sql::PreparedStatement * preparedStatement;
+			sql::ResultSet *resultSet;
+			sql = "";
+			System:String ^ Teste;
+			try {
+				MySQLDAO * MySQL = MySQLDAO::getInstance();
+				connection = MySQL->getConnection();
+				int vetor[5000];
+				int i = 0;
+				preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+				resultSet = preparedStatement->executeQuery();
+				while (resultSet->next()) {
+					vetor[i] = resultSet->getInt(1);
+					this->cb3_realizacaoos->Items->Add(String::Format("OS{0}", resultSet->getInt(1)));
+					i++;
+				}
+			}
+			catch (sql::SQLException e) {
+				connection->close();
+				log = e.what();
+			}
+			try {
+				MySQLDAO * MySQL = MySQLDAO::getInstance();
+				connection = MySQL->getConnection();
+				int vetor[5000];
+				int i = 0;
+				preparedStatement = connection->prepareStatement("SELECT * FROM db_b.Equipe;");
+				resultSet = preparedStatement->executeQuery();
+				while (resultSet->next()) {
+					sql = (resultSet->getString(1)).c_str();
+					Teste = msclr::interop::marshal_as<String^>(sql);
+					this->cb1_realizacaoos->Items->Add(Teste);
+					i++;
+				}
+			}
+			catch (sql::SQLException e) {
+				connection->close();
+				log = e.what();
+			}
 		}
 
 	protected:
@@ -118,7 +163,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// cb1_realizacaoos
 			// 
 			this->cb1_realizacaoos->FormattingEnabled = true;
-			this->cb1_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Grupo 1", L"Grupo 2", L"Grupo 3" });
+			//this->cb1_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Grupo 1", L"Grupo 2", L"Grupo 3" });
 			this->cb1_realizacaoos->Location = System::Drawing::Point(97, 87);
 			this->cb1_realizacaoos->Name = L"cb1_realizacaoos";
 			this->cb1_realizacaoos->Size = System::Drawing::Size(121, 21);
@@ -138,7 +183,7 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// cb3_realizacaoos
 			// 
 			this->cb3_realizacaoos->FormattingEnabled = true;
-			this->cb3_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"OS0", L"OS1", L"OS2", L"OS3", L"OS4" });
+			//this->cb3_realizacaoos->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"OS0", L"OS1", L"OS2", L"OS3", L"OS4" });
 			this->cb3_realizacaoos->Location = System::Drawing::Point(97, 119);
 			this->cb3_realizacaoos->Name = L"cb3_realizacaoos";
 			this->cb3_realizacaoos->Size = System::Drawing::Size(121, 21);
@@ -200,7 +245,50 @@ private: System::Void bt1_realizacaoos_Click(System::Object^  sender, System::Ev
 	Close();
 }
 private: System::Void bt2_realizacaoos_Click(System::Object^  sender, System::EventArgs^  e) {
-	Close();
+	std::string sql, log;
+	sql::Connection * connection;
+	sql::PreparedStatement * preparedStatement, *preparedStatement2, *preparedStatement3;
+	sql::ResultSet *resultSet;
+	sql = "";
+	try {
+		MySQLDAO * MySQL = MySQLDAO::getInstance();
+		connection = MySQL->getConnection();
+		int i = 0, j, aux, aux2;
+		std::string sql;
+		System::String ^ query;
+		preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+		resultSet = preparedStatement->executeQuery();
+		while (resultSet->next()) {
+			j = this->cb3_realizacaoos->SelectedIndex;
+			if (j == i) {
+				aux = resultSet->getInt(1);
+				aux2 = this->cb2_realizacaoos->SelectedIndex;
+				preparedStatement2 = connection->prepareStatement("UPDATE db_b.OS SET status = ? WHERE id_OS = ?;");
+				if (aux2 == 0) {
+					preparedStatement2->setString(1, "Em Andamento");
+
+				}
+				else {
+					preparedStatement2->setString(1, "Concluida");
+				}
+				preparedStatement2->setInt(2, aux);
+				preparedStatement2->execute();
+				if (aux2 == 0) {
+					preparedStatement2 = connection->prepareStatement("UPDATE db_b.OS SET prioridadeAtendimento = 'Alta' WHERE id_OS = ?;");
+					preparedStatement2->setInt(1, aux);
+					preparedStatement2->execute();
+				}
+				
+
+			}
+			i++;
+
+		}
+	}
+	catch (sql::SQLException e) {
+		connection->close();
+		log = e.what();
+	}
 }
 };
 }

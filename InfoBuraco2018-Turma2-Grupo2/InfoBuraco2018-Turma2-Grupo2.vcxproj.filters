@@ -48,9 +48,6 @@
     <ClCompile Include="Models\MensagemDeFinalizaçãoDeOS.cpp">
       <Filter>Models</Filter>
     </ClCompile>
-    <ClCompile Include="Models\OS.cpp">
-      <Filter>Models</Filter>
-    </ClCompile>
     <ClCompile Include="Models\PlanoSaida.cpp">
       <Filter>Models</Filter>
     </ClCompile>
@@ -63,6 +60,8 @@
     <ClCompile Include="Models\Relatorio.cpp">
       <Filter>Models</Filter>
     </ClCompile>
+    <ClCompile Include="OSDAO.cpp" />
+    <ClCompile Include="OS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TelaCriarBuraco.h" />
@@ -112,9 +111,6 @@
     <ClInclude Include="Models\MensagemDeFinalizaçãoDeOS.h">
       <Filter>Models</Filter>
     </ClInclude>
-    <ClInclude Include="Models\OS.h">
-      <Filter>Models</Filter>
-    </ClInclude>
     <ClInclude Include="Models\PlanoSaida.h">
       <Filter>Models</Filter>
     </ClInclude>
@@ -127,6 +123,8 @@
     <ClInclude Include="Models\Relatorio.h">
       <Filter>Models</Filter>
     </ClInclude>
+    <ClInclude Include="OSDAO.h" />
+    <ClInclude Include="OS.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TelaCriarBuraco.resx" />

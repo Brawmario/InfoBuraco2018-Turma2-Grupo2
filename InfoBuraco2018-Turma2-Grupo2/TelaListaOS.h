@@ -1,4 +1,6 @@
 #pragma once
+#include "dao/MySQLDAO.h"
+#include <msclr\marshal_cppstd.h>
 
 namespace InfoBuraco2018Turma2Grupo2 {
 
@@ -21,6 +23,30 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			//
 			//TODO: Add the constructor code here
 			//
+			std::string sql, log;
+			sql::Connection * connection;
+			sql::PreparedStatement * preparedStatement;
+			sql::ResultSet *resultSet;
+			sql = "";
+			try {
+				MySQLDAO * MySQL = MySQLDAO::getInstance();
+				connection = MySQL->getConnection();
+				int vetor[5000];
+				int i = 0;
+				preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS where status <> 'Concluida';");
+				resultSet = preparedStatement->executeQuery();
+				this->lbox_listaos->BeginUpdate();
+				while (resultSet->next()) {
+					vetor[i] = resultSet->getInt(1);
+					this->lbox_listaos->Items->Add(String::Format("OS{0}", resultSet->getInt(1)));
+					i++;
+				}
+				this->lbox_listaos->EndUpdate();
+			}
+			catch (sql::SQLException e) {
+				connection->close();
+				log = e.what();
+			}
 		}
 
 	protected:
@@ -88,11 +114,11 @@ namespace InfoBuraco2018Turma2Grupo2 {
 			// lbox_listaos
 			// 
 			this->lbox_listaos->FormattingEnabled = true;
-			this->lbox_listaos->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
+			/*this->lbox_listaos->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
 				L"OS0", L"OS1", L"OS2", L"OS3", L"OS4", L"OS5",
 					L"OS6", L"OS7", L"OS8", L"OS9", L"OS10", L"OS11", L"OS12", L"OS13", L"OS14", L"OS15", L"OS16", L"OS17", L"OS18", L"OS19", L"OS20",
 					L"OS21", L"OS22", L"OS23", L"OS24"
-			});
+			});*/
 			this->lbox_listaos->Location = System::Drawing::Point(12, 43);
 			this->lbox_listaos->Name = L"lbox_listaos";
 			this->lbox_listaos->Size = System::Drawing::Size(108, 277);
@@ -258,13 +284,43 @@ namespace InfoBuraco2018Turma2Grupo2 {
 		}
 #pragma endregion
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-		this->lb8_listaos->Text = "OS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb9_listaos->Text = "PrioridadeOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb10_listaos->Text = "PessoalOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb11_listaos->Text = "EquipamentoOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb12_listaos->Text = "MaterialOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb13_listaos->Text = "CustoOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
-		this->lb14_listaos->Text = "StatusOS" + Convert::ToString(this->lbox_listaos->SelectedIndex);
+		std::string sql, log;
+		sql::Connection * connection;
+		sql::PreparedStatement * preparedStatement;
+		sql::ResultSet *resultSet;
+		sql = "";
+		try {
+			MySQLDAO * MySQL = MySQLDAO::getInstance();
+			connection = MySQL->getConnection();
+			int i = 0, j;
+			std::string sql;
+			preparedStatement = connection->prepareStatement("SELECT * FROM db_b.OS;");
+			resultSet = preparedStatement->executeQuery();
+			while (resultSet->next()) {
+				j = this->lbox_listaos->SelectedIndex;
+				if (j == i) {
+					this->lb8_listaos->Text = Convert::ToString(resultSet->getInt(1));
+					sql = resultSet->getString(2).c_str();
+					this->lb9_listaos->Text = msclr::interop::marshal_as<String^>(sql);
+					this->lb10_listaos->Text = Convert::ToString(resultSet->getInt(3));
+					sql = resultSet->getString(4).c_str();
+					this->lb11_listaos->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(5).c_str();
+					this->lb12_listaos->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(6).c_str();
+					this->lb13_listaos->Text = msclr::interop::marshal_as<String^>(sql);
+					sql = resultSet->getString(7).c_str();
+					this->lb14_listaos->Text = msclr::interop::marshal_as<String^>(sql);
+
+				}
+				i++;
+
+			}
+		}
+		catch (sql::SQLException e) {
+			connection->close();
+			log = e.what();
+		}
 	}
 	private: System::Void ListaOS_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
